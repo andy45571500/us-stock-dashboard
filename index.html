@@ -1,1 +1,575 @@
-PLACEHOLDER_BASE64
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美股每日資訊看板 - 2026/06/23</title>
+<style>
+  :root {
+    --bg: #f5f7fb;
+    --card-bg: #ffffff;
+    --primary: #1a56db;
+    --primary-dark: #1e3a8a;
+    --green: #16a34a;
+    --red: #dc2626;
+    --gray: #6b7280;
+    --border: #e5e7eb;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    background: var(--bg);
+    color: #1f2937;
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 28px 24px;
+    text-align: center;
+  }
+  header h1 { margin: 0 0 8px; font-size: 26px; font-weight: 700; }
+  header .sub { font-size: 14px; opacity: 0.9; }
+  header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 24px 16px 60px; }
+  nav.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: -10px auto 28px;
+    max-width: 1100px;
+  }
+  nav.toc a {
+    text-decoration: none;
+    background: white;
+    border: 1px solid var(--border);
+    color: var(--primary-dark);
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+  }
+  section { margin-bottom: 36px; }
+  section h2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    border-left: 4px solid var(--primary);
+    padding-left: 10px;
+    margin-bottom: 16px;
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .news-title a {
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .news-title a:hover { text-decoration: underline; }
+  .meta {
+    font-size: 12px;
+    color: var(--gray);
+    margin: 4px 0 8px;
+  }
+  .meta span { margin-right: 10px; }
+  .summary { font-size: 14px; color: #374151; }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  th, td {
+    padding: 10px 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    background: #eef2ff;
+    color: var(--primary-dark);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  tr:last-child td { border-bottom: none; }
+  .pos { color: var(--green); font-weight: 700; }
+  .neg { color: var(--red); font-weight: 700; }
+  .pill {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .pill.buy { background: #dcfce7; color: #15803d; }
+  .pill.hold { background: #fef9c3; color: #854d0e; }
+  .pill.reduce { background: #fee2e2; color: #b91c1c; }
+  .pill.watch { background: #e0e7ff; color: #3730a3; }
+  .stat-table th, .stat-table td { text-align: left; }
+  .indices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .idx-card {
+    background: white;
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
+  .idx-card .name { font-size: 13px; color: var(--gray); font-weight: 600; }
+  .idx-card .val { font-size: 20px; font-weight: 700; margin: 4px 0; }
+  .note {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    color: #9a3412;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+  .disclaimer {
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 10px;
+  }
+  .company-block h3 { margin: 0 0 6px; color: var(--primary-dark); font-size: 16px; }
+  footer {
+    text-align: center;
+    color: var(--gray);
+    font-size: 12px;
+    padding: 20px;
+  }
+  @media (max-width: 600px) {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead { display: none; }
+    td { text-align: right; position: relative; padding-left: 45%; border-bottom: 1px solid var(--border); }
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      text-align: left;
+    }
+    tr { border-bottom: 8px solid var(--bg); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📊 美股每日資訊看板</h1>
+  <div class="sub">2026年6月23日（星期二）｜美東時間早盤｜台灣時間晚間更新</div>
+  <div class="badge">資料時點：開盤後早盤數據（部分為期貨夜盤指引，已標註）</div>
+</header>
+
+<div class="container">
+
+<nav class="toc">
+  <a href="#news">今日新聞快訊</a>
+  <a href="#market">大盤與開盤情況</a>
+  <a href="#hotstocks">熱門股票一覽</a>
+  <a href="#financials">財務數據分析</a>
+  <a href="#emerging">新興公司與產業鏈知識</a>
+  <a href="#portfolio">Jia 的持股分析</a>
+  <a href="#portfolio-yu">Yu 的持股分析</a>
+</nav>
+
+<!-- 1. 今日新聞快訊 -->
+<section id="news">
+  <h2>① 今日新聞快訊</h2>
+
+  <div class="card">
+    <div class="news-title"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-23-2026" target="_blank">大盤受AI晶片股拋售拖累，那斯達克領跌</a></div>
+    <div class="meta"><span>📅 2026-06-23</span><span>🔗 TheStreet</span></div>
+    <div class="summary">道瓊下跌約273點、S&P 500下跌約100點、那斯達克重挫828點，受亞股半導體拋售與油價波動牽動，AI建置成本疑慮升溫。</div>
+  </div>
+
+  <div class="card">
+    <div class="news-title"><a href="https://www.cnbc.com/2026/06/23/oracle-ai-job-cuts-layoffs-21000.html" target="_blank">Oracle裁員2.1萬人，占總員工數近13%</a></div>
+    <div class="meta"><span>📅 2026-06-23</span><span>🔗 CNBC</span></div>
+    <div class="summary">過去12個月裁減約21,000個職位，AI導入致人力精簡，盤前股價下跌2.6%；2026財年資本支出達557億美元（年增162%）。</div>
+  </div>
+
+  <div class="card">
+    <div class="news-title"><a href="https://www.bloomberg.com/news/articles/2026-06-22/spacex-shares-poised-to-slide-again-as-us-market-reopens" target="_blank">SpaceX三日蒸發逾6000億美元市值，跌破2萬億美元大關</a></div>
+    <div class="meta"><span>📅 2026-06-22</span><span>🔗 Bloomberg</span></div>
+    <div class="summary">單日重挫16.4%，三日累跌23%，因宣布首次發行至少200億美元投資級債券以支應AI（含收購xAI）資金需求。</div>
+  </div>
+
+  <div class="card">
+    <div class="news-title"><a href="https://www.bloomberg.com/news/articles/2026-06-22/alphabet-shares-drop-after-second-ai-star-departs-for-a-rival" target="_blank">Alphabet單日重挫7%，兩名頂尖AI研究員出走競爭對手</a></div>
+    <div class="meta"><span>📅 2026-06-22</span><span>🔗 Bloomberg</span></div>
+    <div class="summary">Gemini共同負責人Noam Shazeer轉投OpenAI，AlphaFold2共同創造者John Jumper轉投Anthropic，兩日蒸發市值約2500億美元。</div>
+  </div>
+
+  <div class="card">
+    <div class="news-title"><a href="https://www.benzinga.com/markets/offerings/26/06/60046534/why-is-amc-entertainment-stock-falling-tuesday" target="_blank">AMC Entertainment股價暴跌19%，因2億美元增資計畫</a></div>
+    <div class="meta"><span>📅 2026-06-23</span><span>🔗 Benzinga</span></div>
+    <div class="summary">以每股2.10美元向機構投資人定向發行9525萬股，募資約2億美元贖回次級債券，消息公布後股價重挫近19-24%。</div>
+  </div>
+
+  <div class="card">
+    <div class="news-title"><a href="https://www.cnbc.com/2026/06/22/oil-prices-wti-brent-crude-trump-iran-threat-strait-hormuz-closure.html" target="_blank">川普威脅對霍爾木茲海峽徵收「通行費」，油價波動</a></div>
+    <div class="meta"><span>📅 2026-06-22</span><span>🔗 CNBC</span></div>
+    <div class="summary">威脅若60天內未與伊朗達成協議將徵收通行費甚至「接管海峽」；伊朗宣布再次關閉海峽，油價劇烈波動。</div>
+  </div>
+
+  <div class="card">
+    <div class="news-title"><a href="https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html" target="_blank">Fed新任主席Warsh首次主持會議，維持利率不變但暗示可能升息</a></div>
+    <div class="meta"><span>📅 2026-06-17</span><span>🔗 CNBC</span></div>
+    <div class="summary">FOMC以12-0票維持利率區間3.5%-3.75%，刪除偏向降息措辭，點陣圖顯示2026年底利率中位數可能升至3.8%。</div>
+  </div>
+
+  <div class="card">
+    <div class="news-title"><a href="https://finance.yahoo.com/markets/world-indices/articles/kospi-falls-8-triggers-circuit-061212686.html" target="_blank">韓國KOSPI兩度觸發熔斷機制，亞股AI晶片股遭重挫拖累全球</a></div>
+    <div class="meta"><span>📅 2026-06-23</span><span>🔗 Yahoo Finance</span></div>
+    <div class="summary">KOSPI重挫逾8-10%，三星電子、SK海力士跌逾12%，反映AI/半導體交易過度擁擠後的劇烈去槓桿賣壓，連帶影響美股科技股。</div>
+  </div>
+
+</section>
+
+<!-- 2. 大盤與開盤情況 -->
+<section id="market">
+  <h2>② 大盤與開盤情況</h2>
+  <div class="note">⚠️ 三大指數實際開盤數據與期貨夜盤指引混合呈現，今日全球AI/半導體股遭遇大規模去槓桿賣壓，那斯達克領跌。</div>
+
+  <div class="indices">
+    <div class="idx-card">
+      <div class="name">道瓊工業指數</div>
+      <div class="val neg">-273點</div>
+      <div class="meta">約 -0.30%</div>
+    </div>
+    <div class="idx-card">
+      <div class="name">S&P 500</div>
+      <div class="val neg">-1.26%</div>
+      <div class="meta">約下跌100點</div>
+    </div>
+    <div class="idx-card">
+      <div class="name">那斯達克</div>
+      <div class="val neg">-2.69%</div>
+      <div class="meta">那斯達克100，重挫828點</div>
+    </div>
+    <div class="idx-card">
+      <div class="name">VIX 恐慌指數</div>
+      <div class="val">17.48</div>
+      <div class="meta">近一月區間15.18-23.34</div>
+    </div>
+    <div class="idx-card">
+      <div class="name">美元指數 DXY</div>
+      <div class="val pos">100.93</div>
+      <div class="meta">24h +0.19%</div>
+    </div>
+    <div class="idx-card">
+      <div class="name">10年期美債殖利率</div>
+      <div class="val">~4.5%</div>
+      <div class="meta">近兩週高位，Fed鷹派支撐</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <strong>期貨夜盤指引：</strong> 9月E-mini S&P期貨(ESU26) -1.14%；9月E-mini那斯達克期貨(NQU26) -2.58%。
+    <br><strong>亞股早盤：</strong> 日經225 -3.0%~-3.5%（終結連續8日上漲）；韓國KOSPI -8%~-10%（兩度熔斷，外資單日賣出逾25億美元）；恆生指數 -1.8%；歐股主要指數下跌逾1%。
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-23-2026" target="_blank">TheStreet</a> ｜ <a href="https://finance.yahoo.com/markets/world-indices/articles/kospi-falls-8-triggers-circuit-061212686.html" target="_blank">Yahoo Finance</a></div>
+  </div>
+
+  <div class="card">
+    <strong>機構資金流向：</strong> 截至6/3當週美國ETF淨流入612.8億美元（股票型440.6億美元）；5月科技板塊吸金90億美元，但排除科技後其他板塊淨流出40億美元，資金高度集中AI/科技題材。成長型因子ETF持續吸金，價值型遭流出。期權異常與Dark Pool當日具體數據未能取得公開來源。
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://www.ici.org/research/stats/etf_flows" target="_blank">ICI ETF Flows</a> ｜ <a href="https://www.etftrends.com/equity-etf-content-hub/2026-etf-inflows-leading-group/" target="_blank">ETF Trends</a></div>
+  </div>
+</section>
+
+<!-- 3+4. 熱門股票與財務數據 -->
+<section id="hotstocks">
+  <h2>③ 熱門股票一覽 ／ ④ 財務數據分析</h2>
+
+  <div class="company-block card">
+    <h3>FedEx Corp (FDX) — 今日盤後發布財報</h3>
+    <div class="summary">21位分析師中17位給予「強力買進」。選擇權市場隱含財報後波動約±7.73%。完成Freight部門分拆上市，受惠DRIVE成本削減計畫，但上季營收動能停滯。</div>
+    <table class="stat-table" style="margin-top:10px;">
+      <tr><th>預期EPS</th><td>$5.91–$5.95（60天上修1.9%）</td></tr>
+      <tr><th>預期營收</th><td>$24.03B–$24.18B</td></tr>
+      <tr><th>Forward P/E</th><td>~15.9</td></tr>
+      <tr><th>PEG / EV-EBITDA</th><td>1.56 / 9.76</td></tr>
+    </table>
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://news.alphastreet.com/fedex-q4-2026-earnings-preview-june-23-street-expects-5-95-eps/" target="_blank">Alphastreet</a> ｜ <a href="https://www.tipranks.com/news/retail-investors-looking-for-fedex-to-deliver-in-q4-earnings" target="_blank">TipRanks</a></div>
+  </div>
+
+  <div class="company-block card">
+    <h3>Apogee Therapeutics (APGE) — 遭AbbVie以109億美元收購</h3>
+    <div class="summary">6/22單日暴漲46.7%。AbbVie以每股$135.11現金收購，主力藥物zumilokibart具「pipeline-in-a-product」潛力，預計2026年Q3完成交易。</div>
+    <table class="stat-table" style="margin-top:10px;">
+      <tr><th>收購總額</th><td>約$10.9B</td></tr>
+      <tr><th>現金及短期投資</th><td>約$1.06B</td></tr>
+      <tr><th>收購前目標價均值</th><td>$118–$120</td></tr>
+    </table>
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://www.bloomberg.com/news/articles/2026-06-22/abbvie-to-buy-apogee-therapeutics-for-10-9-billion-in-cash" target="_blank">Bloomberg</a> ｜ <a href="https://www.sec.gov/Archives/edgar/data/0001974640/000114036126025844/ef20076505_ex99-1.htm" target="_blank">SEC EDGAR 8-K</a></div>
+  </div>
+
+  <div class="company-block card">
+    <h3>AbbVie (ABBV) — 收購方，五年來最大筆併購</h3>
+    <div class="summary">Q1 2026營收$15B優於預期，調整後EPS $2.65優於指引。Skyrizi營收年增約30%，全年指引上修，透過收購Apogee強化免疫學管線。</div>
+    <table class="stat-table" style="margin-top:10px;">
+      <tr><th>Q1營收 / 年增</th><td>$15B / +12.4%</td></tr>
+      <tr><th>調整後EPS</th><td>$2.65（優於預期）</td></tr>
+      <tr><th>Forward P/E</th><td>~15.2x</td></tr>
+      <tr><th>分析師均目標價</th><td>$247.06（+8.5%空間）</td></tr>
+    </table>
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://www.tikr.com/blog/abbvie-stock-beats-q1-estimates-as-skyrizi-hits-4-5b-in-a-single-quarter" target="_blank">TIKR</a> ｜ <a href="https://stockanalysis.com/stocks/abbv/statistics/" target="_blank">StockAnalysis.com</a></div>
+  </div>
+
+  <div class="company-block card">
+    <h3>Super Micro Computer (SMCI) — AI伺服器需求推動大漲</h3>
+    <div class="summary">6/22單日大漲15.3%。Q3 FY2026營收年增123%但季減19%（客戶現場延遲）。GF Securities上調評等至「買進」，目標價$48；受惠Nvidia Vera Rubin架構藍圖。</div>
+    <table class="stat-table" style="margin-top:10px;">
+      <tr><th>營收 / 年增</th><td>$10.2B / +123%</td></tr>
+      <tr><th>Non-GAAP EPS</th><td>$0.84</td></tr>
+      <tr><th>毛利率(Non-GAAP)</th><td>10.1%</td></tr>
+      <tr><th>Forward P/E / PEG</th><td>~12.0x / 0.41</td></tr>
+    </table>
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://www.fool.com/investing/2026/06/22/why-super-micro-computer-stock-is-skyrocketing-tod/" target="_blank">The Motley Fool</a> ｜ <a href="https://ir.supermicro.com/news/news-details/2026/Supermicro-Announces-Third-Quarter-Fiscal-Year-2026-Financial-Results/default.aspx" target="_blank">Supermicro IR</a></div>
+  </div>
+
+  <div class="company-block card">
+    <h3>SpaceX (SPCX) — 三日連跌蒸發逾6000億美元市值</h3>
+    <div class="summary">6/22單日重挫16%，創上市新低，三日累跌23%-31%。首次發行投資級債券（至少$200億）支應AI/xAI投資，引發稀釋與槓桿疑慮，市值由近2.5萬億跌至約2萬億美元。</div>
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://www.bloomberg.com/news/articles/2026-06-22/spacex-shares-poised-to-slide-again-as-us-market-reopens" target="_blank">Bloomberg</a> ｜ <a href="https://www.nbcnews.com/business/corporations/spacex-stock-investor-losses-rcna351260" target="_blank">NBC News</a></div>
+  </div>
+
+  <div class="company-block card">
+    <h3>Definium Therapeutics (DFTX) — LSD憂鬱症新藥三期數據亮眼</h3>
+    <div class="summary">6/22單日暴漲約53-55%。DT120三期Emerge研究達主要終點，第6週MADRS評分較安慰劑組改善8.1分(p&lt;0.0001)，安全性良好。同步宣布增資計畫，Needham等機構上調目標價。</div>
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://www.zacks.com/stock/news/2941580/definium-stock-soars-50-as-phase-iii-depression-study-meets-key-goals" target="_blank">Zacks</a> ｜ <a href="https://www.fiercebiotech.com/biotech/definiums-lsd-formula-produces-best-data-ever-seen-pivotal-depression-trial-ceo-says" target="_blank">FierceBiotech</a></div>
+  </div>
+
+  <div class="company-block card">
+    <h3>Alphabet (GOOGL) — 法律訴訟敗訴致股價重挫</h3>
+    <div class="summary">6/22單日下跌約7%。加州法官駁回Google/YouTube「致癮性設計」訴訟重審請求，疊加英國監管機關對搜尋排名透明度的審查及AI人才出走消息。</div>
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://www.interactivecrypto.com/alphabet-s-stock-plummets-6-7-amid-legal-setbacks-and-regulatory-pressure-on-june-22-2026-jun-20-1782142310550" target="_blank">InteractiveCrypto</a> ｜ <a href="https://finance.yahoo.com/markets/stocks/live/stock-market-today-monday-june-22-225817825.html" target="_blank">Yahoo Finance</a></div>
+  </div>
+
+  <div class="company-block card">
+    <h3>Moderna (MRNA) — 同步重挫9.54%</h3>
+    <div class="summary">6/22單日下跌9.54%，為S&P 500當日跌幅最大成分股。延續長期壓力主軸：COVID疫苗銷售下滑，多產品平台轉型尚未填補營收缺口。</div>
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://seekingalpha.com/article/4855797-moderna-on-transition-from-pandemic-windfall-to-multi-product-platform" target="_blank">Seeking Alpha</a></div>
+  </div>
+
+</section>
+
+<!-- 5. 新興公司與產業鏈知識 -->
+<section id="emerging">
+  <h2>⑤ 新興公司與產業鏈知識</h2>
+
+  <div class="company-block card">
+    <h3>🚀 Doncasters Group (NYSE: DPC) — 航太引擎鑄件供應商</h3>
+    <div class="summary">1778年成立的英國老牌精密製造商，生產航太發動機與工業燃氣輪機核心零件（渦輪葉片、結構鑄件）。預計6/25於NYSE掛牌「DPC」，發行2,333萬股，每股28-32美元，估值約42億美元市值。過去12個月營收8.86億美元（+12.2%），但仍淨虧損1.67億美元。卡達主權基金QIA已認購7,500萬美元。</div>
+    <p style="font-size:14px; margin-top:10px;"><strong>產業鏈教學：</strong> 航太發動機產業鏈分三層——上游為鎮、鈷等耐高溫稀有金屬礦商；中游是Doncasters所在位置：發動機原廠（GE Aerospace、Rolls-Royce）將高難度精密鑄件外包給少數具「投資鑄造」技術門檻的專業供應商；下游則是波音、空巴組裝整機後賣給航空公司。疫情後航班需求回升＋各國國防支出上升，使航太引擎零件供應商成為市場認為具「超級成長週期」的概念股，但需留意其資本支出大、目前仍處淨虧損。</p>
+    <div class="meta">來源：<a href="https://www.bloomberg.com/news/articles/2026-06-15/aerospace-supplier-doncasters-seeks-746-7-million-in-us-ipo" target="_blank">Bloomberg</a> ｜ <a href="https://www.businesswire.com/news/home/20260614384787/en/Doncasters-Announces-Launch-of-Initial-Public-Offering" target="_blank">BusinessWire</a></div>
+  </div>
+
+  <div class="company-block card">
+    <h3>⛏️ REalloys Inc. (NASDAQ: ALOY) — 稀土金屬冶金平台</h3>
+    <div class="summary">早期稀土供應鏈重建公司，佈局加拿大Saskatchewan煉製設施與美國俄亥俄州金屬冶金廠（持有美國國防部、NASA合約）。目前pre-revenue階段（單季營收約70萬美元）。6/21股價單日漲7.65%，因取得阿帕拉契亞20億噸稀土資源優先採購權LOI，並與格陵蘭Tanbreez稀土項目簽15年承購協議。</div>
+    <p style="font-size:14px; margin-top:10px;"><strong>產業鏈教學：</strong> 稀土供應鏈也分三段，目前幾乎被中國壟斷——上游是採礦開採（REalloys透過「承購協議」鎖定未來產量）；中游是精煉冶金，技術門檻極高，過去40年美國幾乎放棄此能力，目前90%以上產能在中國，REalloys的俄亥俄廠正瞄準成為北美少數有實績的重稀土冶金廠；下游應用於電動車馬達、風力發電機、戰機雷達等永磁體。美國國防部訂出2027年禁用中國產稀土材料新規，催生這類「卡位型」早期股，屬敘事驅動、高波動標的。</p>
+    <div class="meta">來源：<a href="https://www.timothysykes.com/news/realloysinc-aloy-news-2026_06_21/" target="_blank">StocksToTrade</a> ｜ <a href="https://www.morningstar.com/news/pr-newswire/20260407ln27905/us-rare-earth-processor-locks-in-supply-ahead-of-2027-cutoff" target="_blank">Morningstar/PR Newswire</a></div>
+  </div>
+
+</section>
+
+<!-- 6. 我的持股分析 -->
+<section id="portfolio">
+  <h2>⑥ Jia 的持股分析</h2>
+  <div class="disclaimer">⚠️ 以下操作建議僅為研究參考，非投資建議，請自行判斷風險並諮詢專業財務顧問。所有股價為查詢時點數據，可能與實際盤中價格略有出入。</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>代號</th><th>持股</th><th>成本</th><th>現價</th><th>損益</th><th>目標價區間</th><th>評等分布</th><th>操作建議</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="代號">AAPL</td><td data-label="持股">4.0645</td><td data-label="成本">$173.53</td><td data-label="現價">$299.47</td>
+        <td data-label="損益" class="pos">+$511.79 (+72.6%)</td><td data-label="目標價">$299–$324（高至$350）</td><td data-label="評等">66B/26H/3S</td><td data-label="建議"><span class="pill buy">持有/小幅加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">ABBV</td><td data-label="持股">1.1282</td><td data-label="成本">$113.86</td><td data-label="現價">$231.38</td>
+        <td data-label="損益" class="pos">+$132.59 (+103.2%)</td><td data-label="目標價">$184–$299（均$253）</td><td data-label="評等">21B/9H/1S</td><td data-label="建議"><span class="pill hold">持有</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">ADBE</td><td data-label="持股">1</td><td data-label="成本">$354.20</td><td data-label="現價">$194.90</td>
+        <td data-label="損益" class="neg">-$159.30 (-45.0%)</td><td data-label="目標價">$220–$487（均$278）</td><td data-label="評等">17B/18H/4S</td><td data-label="建議"><span class="pill hold">持有，不追加</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">AMZN</td><td data-label="持股">1</td><td data-label="成本">$124.00</td><td data-label="現價">$233.84</td>
+        <td data-label="損益" class="pos">+$109.84 (+88.6%)</td><td data-label="目標價">$250–$370（均$313）</td><td data-label="評等">107B/1H/0S</td><td data-label="建議"><span class="pill buy">持有/可加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">BRK.B</td><td data-label="持股">1</td><td data-label="成本">$449.00</td><td data-label="現價">$488.74</td>
+        <td data-label="損益" class="pos">+$39.74 (+8.85%)</td><td data-label="目標價">$481–$570（均$520）</td><td data-label="評等">3B/1H/0S</td><td data-label="建議"><span class="pill hold">持有</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">DIS</td><td data-label="持股">3</td><td data-label="成本">$119.03</td><td data-label="現價">$102.45</td>
+        <td data-label="損益" class="neg">-$49.74 (-13.93%)</td><td data-label="目標價">$77–$160（均$133）</td><td data-label="評等">27B/3H/1S</td><td data-label="建議"><span class="pill buy">持有/逢低加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">GOOG</td><td data-label="持股">1</td><td data-label="成本">$252.00</td><td data-label="現價">$348.78</td>
+        <td data-label="損益" class="pos">+$96.78 (+38.4%)</td><td data-label="目標價">$340–$515（均$413）</td><td data-label="評等">83B/14H/0S</td><td data-label="建議"><span class="pill buy">持有/回檔加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">JNJ</td><td data-label="持股">0.0796</td><td data-label="成本">$164.57</td><td data-label="現價">$231.29</td>
+        <td data-label="損益" class="pos">+$5.31 (+40.5%)</td><td data-label="目標價">均$234–$266</td><td data-label="評等">13B/11H/1S</td><td data-label="建議"><span class="pill hold">持有</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">KHC</td><td data-label="持股">2.1999</td><td data-label="成本">$35.83</td><td data-label="現價">$22.38</td>
+        <td data-label="損益" class="neg">-$29.59 (-37.5%)</td><td data-label="目標價">$17–$42（均$22-24）</td><td data-label="評等">1B/16H/4S</td><td data-label="建議"><span class="pill reduce">減碼/考慮停損</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">NKE</td><td data-label="持股">3.1105</td><td data-label="成本">$96.46</td><td data-label="現價">$45.21</td>
+        <td data-label="損益" class="neg">-$159.46 (-53.1%)</td><td data-label="目標價">$23–$120（均$60）</td><td data-label="評等">24B/24H/0S</td><td data-label="建議"><span class="pill watch">觀察，財報前不追加</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">NVDA</td><td data-label="持股">20</td><td data-label="成本">$123.30</td><td data-label="現價">$203.27</td>
+        <td data-label="損益" class="pos">+$1,599.40 (+64.9%)</td><td data-label="目標價">$180–$500（均$284）</td><td data-label="評等">59B/2H/1S</td><td data-label="建議"><span class="pill buy">持有/分批加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">ORCL</td><td data-label="持股">1</td><td data-label="成本">$179.50</td><td data-label="現價">$175.07</td>
+        <td data-label="損益" class="neg">-$4.43 (-2.47%)</td><td data-label="目標價">$155–$400（均$253-272）</td><td data-label="評等">36B/6H/1S</td><td data-label="建議"><span class="pill buy">持有/逢低加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">TSLA</td><td data-label="持股">1</td><td data-label="成本">$432.00</td><td data-label="現價">$404.75</td>
+        <td data-label="損益" class="neg">-$27.25 (-6.31%)</td><td data-label="目標價">分歧大（均$404-420）</td><td data-label="評等">11B/15H/3S</td><td data-label="建議"><span class="pill watch">持有觀察</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">TSM</td><td data-label="持股">1</td><td data-label="成本">$227.50</td><td data-label="現價">$467.67</td>
+        <td data-label="損益" class="pos">+$240.17 (+105.6%)</td><td data-label="目標價">均$404-465（上看$575）</td><td data-label="評等">17B/0H/0S</td><td data-label="建議"><span class="pill hold">持有/部分獲利了結</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">UBER</td><td data-label="持股">1</td><td data-label="成本">$97.55</td><td data-label="現價">$70.06</td>
+        <td data-label="損益" class="neg">-$27.49 (-28.18%)</td><td data-label="目標價">$72–$150（均$104-108）</td><td data-label="評等">29B/1H/0S</td><td data-label="建議"><span class="pill buy">持有/逢低加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">WBD</td><td data-label="持股">3</td><td data-label="成本">$26.49</td><td data-label="現價">$26.95</td>
+        <td data-label="損益" class="pos">+$1.38 (+1.74%)</td><td data-label="目標價">$22–$35（均$30）</td><td data-label="評等">6B/13H/1S</td><td data-label="建議"><span class="pill watch">持有待併購完成</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card" style="margin-top:16px;">
+    <strong>⭐ 重點觀察：</strong> WBD已被Paramount Skydance以每股$31現金收購（約1100億美元交易），現價$26.95仍有約15%套利空間，已過股東投票及美國司法部初審，待州檢與歐洲監管，預計2026 Q3完成。GOOG因AI人才出走（Shazeer→OpenAI、Jumper→Anthropic）單日跌5-7%，但分析師目標價未變。ORCL因AI資本支出及裁員消息重挫5%。NKE將於6/30公布財報，為關鍵觀察點。
+    <div class="meta" style="margin-top:8px;">來源：<a href="https://stockanalysis.com/stocks/wbd/forecast/" target="_blank">StockAnalysis WBD</a> ｜ <a href="https://www.marketbeat.com/stocks/NASDAQ/GOOGL/forecast/" target="_blank">MarketBeat GOOGL</a></div>
+  </div>
+
+</section>
+
+<!-- 7. Yu 的持股分析 -->
+<section id="portfolio-yu">
+  <h2>⑦ Yu 的持股分析</h2>
+  <div class="disclaimer">⚠️ 以下操作建議僅為研究參考，非投資建議，請自行判斷風險並諮詢專業財務顧問。所有股價為查詢時點數據，可能與實際盤中價格略有出入。</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>代號</th><th>持股</th><th>成本</th><th>現價</th><th>損益</th><th>目標價區間</th><th>評等分布</th><th>操作建議</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="代號">AAPL</td><td data-label="持股">4.1114</td><td data-label="成本">$171.17</td><td data-label="現價">$294.30</td>
+        <td data-label="損益" class="pos">+$506.23 (+71.93%)</td><td data-label="目標價">$299–$324（高至$350）</td><td data-label="評等">66B/26H/3S</td><td data-label="建議"><span class="pill buy">持有/小幅加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">BRK.B</td><td data-label="持股">13</td><td data-label="成本">$371.04</td><td data-label="現價">$492.81</td>
+        <td data-label="損益" class="pos">+$1,583.03 (+32.82%)</td><td data-label="目標價">$481–$570（均$520）</td><td data-label="評等">3B/1H/0S</td><td data-label="建議"><span class="pill hold">持有</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">DIS</td><td data-label="持股">6.1003</td><td data-label="成本">$144.68</td><td data-label="現價">$103.53</td>
+        <td data-label="損益" class="neg">-$251.01 (-28.44%)</td><td data-label="目標價">$77–$160（均$133）</td><td data-label="評等">27B/3H/1S</td><td data-label="建議"><span class="pill buy">持有/逢低加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">GOOG</td><td data-label="持股">4.0027</td><td data-label="成本">$300.40</td><td data-label="現價">$346.08</td>
+        <td data-label="損益" class="pos">+$182.84 (+15.21%)</td><td data-label="目標價">$340–$515（均$413）</td><td data-label="評等">83B/14H/0S</td><td data-label="建議"><span class="pill buy">持有/回檔加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">KO</td><td data-label="持股">62.0714</td><td data-label="成本">$60.57</td><td data-label="現價">$80.31</td>
+        <td data-label="損益" class="pos">+$1,225.07 (+32.58%)</td><td data-label="目標價">$76–$91（均$83-87）</td><td data-label="評等">Buy共識(15-22位)</td><td data-label="建議"><span class="pill hold">持有，留意IRS訴訟</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">LITE</td><td data-label="持股">1</td><td data-label="成本">$870.00</td><td data-label="現價">$827.92</td>
+        <td data-label="損益" class="neg">-$42.08 (-4.84%)</td><td data-label="目標價">均$1,021–$1,111（高$1,300）</td><td data-label="評等">14-15B/5H/0S</td><td data-label="建議"><span class="pill buy">加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">MO</td><td data-label="持股">9.4602</td><td data-label="成本">$43.65</td><td data-label="現價">$71.61</td>
+        <td data-label="損益" class="pos">+$264.51 (+64.06%)</td><td data-label="目標價">$62–$77（均$68-72）</td><td data-label="評等">4B/3-5H/1S</td><td data-label="建議"><span class="pill hold">持有/小幅加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">MRVL</td><td data-label="持股">3</td><td data-label="成本">$273.64</td><td data-label="現價">$279.04</td>
+        <td data-label="損益" class="pos">+$16.19 (+1.97%)</td><td data-label="目標價">均$219–$242（高$365-385）</td><td data-label="評等">Strong Buy共識(28-44位)</td><td data-label="建議"><span class="pill buy">加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">MU</td><td data-label="持股">3</td><td data-label="成本">$775.00</td><td data-label="現價">$1,051.77</td>
+        <td data-label="損益" class="pos">+$830.31 (+35.71%)</td><td data-label="目標價">均$1,008–$1,015（高$1,750）</td><td data-label="評等">Strong Buy共識(30位)</td><td data-label="建議"><span class="pill buy">加碼/逢回布局</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">NVDA</td><td data-label="持股">44.0752</td><td data-label="成本">$80.24</td><td data-label="現價">$200.04</td>
+        <td data-label="損益" class="pos">+$5,280.19 (+149.30%)</td><td data-label="目標價">$180–$500（均$284）</td><td data-label="評等">59B/2H/1S</td><td data-label="建議"><span class="pill buy">持有/分批加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">ORCL</td><td data-label="持股">4.008</td><td data-label="成本">$138.57</td><td data-label="現價">$165.16</td>
+        <td data-label="損益" class="pos">+$106.56 (+19.19%)</td><td data-label="目標價">$155–$400（均$253-272）</td><td data-label="評等">36B/6H/1S</td><td data-label="建議"><span class="pill buy">持有/逢低加碼</span></td>
+      </tr>
+      <tr>
+        <td data-label="代號">VOO</td><td data-label="持股">27.5765</td><td data-label="成本">$495.27</td><td data-label="現價">$676.34</td>
+        <td data-label="損益" class="pos">+$4,993.25 (+36.56%)</td><td data-label="目標價">—（追蹤S&P 500指數）</td><td data-label="評等">—</td><td data-label="建議"><span class="pill hold">持有（核心定期定額）</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card" style="margin-top:16px;">
+    <strong>📊 帳戶總覽：</strong> 股票部位（Equities）市值約$29,594.83，未實現損益 +$9,701.84（+48.77%）；含VOO ETF後，整體帳戶未實現損益約 +$14,695.09（+43.8%）。
+  </div>
+  <div class="card" style="margin-top:10px;">
+    <strong>⭐ 重點觀察：</strong> MU因南韓晶片股連動賣壓6/23單日重挫逾12%，但與Anthropic簽署HBM/DRAM/SSD長約為長期利多，6/24盤後將公布財報為關鍵觀察點。MRVL與LITE受惠AI資料中心交換器/光通訊需求，近期分析師大幅上修目標價。KO需留意6/25與IRS約200億美元轉讓定價訴訟的法院裁決結果。
+  </div>
+</section>
+
+</div>
+
+<footer>
+  美股每日資訊看板 · 由 AI 自動彙整生成 · 內容僅供參考，不構成投資建議 · 產出時間：2026-06-23
+</footer>
+
+</body>
+</html>
