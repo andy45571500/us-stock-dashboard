@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>美股每日資訊看板 - 2026/07/20</title>
+<title>美股每日資訊看板 - 2026/09/02</title>
 <style>
   :root{
     --bg:#f4f6fb; --card:#ffffff; --ink:#1a1f36; --sub:#5b6378;
@@ -84,18 +84,21 @@
   .summary-bar .box{flex:1;min-width:150px;background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:10px 14px;}
   .summary-bar .box b{display:block;font-size:11px;color:var(--sub);font-weight:600;}
   .summary-bar .box span{font-size:16px;font-weight:800;}
+  .positive{color:var(--green);font-weight:700;}
+  .negative{color:var(--red);font-weight:700;}
+  .gain{color:var(--green);font-weight:700;}
+  .loss{color:var(--red);font-weight:700;}
   @media (max-width:640px){ table{font-size:11.5px;} header h1{font-size:21px;} }
 </style>
-<style>.gain{color:var(--green);font-weight:700;}.loss{color:var(--red);font-weight:700;}.news-title a{font-weight:700;font-size:15px;color:var(--ink);text-decoration:none;}.news-title a:hover{color:var(--blue);text-decoration:underline;}.stock-header{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;}.stock-ticker{background:var(--chip);color:var(--blue);font-size:12px;padding:1px 8px;border-radius:6px;font-weight:700;}.stock-name{font-weight:700;font-size:15px;}.stock-price{margin-left:auto;font-weight:700;font-size:13.5px;color:var(--sub);}.stock-body{font-size:13.5px;color:#333;}tr.summary td{background:#f1f4fa;font-weight:700;}</style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <h1>📊 美股每日資訊看板</h1>
     <div class="meta">
-      <span class="badge">2026年7月20日（星期一）</span>
+      <span class="badge">2026年9月2日（星期三）</span>
       <span class="badge">美東時間開盤後約1小時 / 台灣時間 22:30</span>
-      <span class="badge">資料時點：美東 7/20 開盤後約一小時；部分個股僅有盤前或前一交易日收盤數據，已於各處註明</span>
+      <span class="badge">資料時點：美東時間開盤約一小時後（台灣/日本時間2026-09-02晚間）。若三大指數當日開盤數據暫缺，已改以最新盤前期貨數據呈現，並於內文標註。</span>
     </div>
   </div>
 </header>
@@ -114,312 +117,502 @@
 
 <section id="sec1">
   <h2><span class="num">1</span> 今日新聞快訊</h2>
-  <div class="news-item"><div class="news-title"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-20-2026" target="_blank">美國再度空襲伊朗、財報週登場，那斯達克期貨盤前攀升</a></div><div class="news-meta">TheStreet · 2026-07-20</div><div class="news-summary">美軍週末對伊朗發動新一輪空襲並宣布又一名美軍陣亡，股指期貨小幅走高、油價震盪，市場焦點轉向本週大型科技股財報。</div></div>
-<div class="news-item"><div class="news-title"><a href="https://finance.yahoo.com/markets/live/stock-market-today-monday-july-20-dow-sp-500-nasdaq-111429441.html" target="_blank">美股週一開高：晶片股領漲、油價自90美元回落，靜待大型科技股財報</a></div><div class="news-meta">Yahoo Finance · 2026-07-20</div><div class="news-summary">開盤後道瓊上漲約0.3%、標普500漲約0.5%、那斯達克漲近0.8%，伊朗表示將透過調停者持續與美方外交接觸，油價由漲轉跌。</div></div>
-<div class="news-item"><div class="news-title"><a href="https://www.bloomberg.com/news/articles/2026-07-19/oil-climbs-as-middle-east-conflict-escalates-markets-wrap" target="_blank">美伊攻擊升級：油價跳漲、債券下跌，通膨疑慮再起</a></div><div class="news-meta">Bloomberg · 2026-07-19</div><div class="news-summary">伊朗稱與美國的停火實質瓦解，布蘭特原油一度大漲3.8%升破每桶91美元、創6月以來新高，債券因油價推升通膨疑慮而走跌。</div></div>
-<div class="news-item"><div class="news-title"><a href="https://fortune.com/2026/07/19/stock-market-today-dow-futures-oil-prices-us-iran-war-death-toll-suez-canal/" target="_blank">美軍死亡人數攀升，市場為美伊重回全面戰爭做準備</a></div><div class="news-meta">Fortune · 2026-07-19</div><div class="news-summary">週末荷莫茲海峽過境船隻遇襲、科威特重要石油設施遭攻擊，前北約指揮官警告蘇伊士運河可能成為下一個目標。</div></div>
-<div class="news-item"><div class="news-title"><a href="https://www.globenewswire.com/news-release/2026/07/20/3329572/19004/en/Brookfield-and-CPP-Investments-to-Acquire-LXP-Industrial-Trust-in-5-2-Billion-All-Cash-Transaction.html" target="_blank">Brookfield攜手CPP Investments以52億美元全現金收購LXP Industrial Trust</a></div><div class="news-meta">GlobeNewswire · 2026-07-20</div><div class="news-summary">LXP股東每股將獲得61.20美元現金，較30日成交量加權平均價溢價12.3%，為今日開盤前公布的最大併購案。</div></div>
-<div class="news-item"><div class="news-title"><a href="https://www.cnbc.com/2026/07/19/earnings-playbook-alphabet-tesla-headline-this-weeks-big-reports.html" target="_blank">財報前瞻：Alphabet、特斯拉領銜本週重量級財報</a></div><div class="news-meta">CNBC · 2026-07-19</div><div class="news-summary">本週有77家標普500成分股公布財報，Alphabet與特斯拉週三登場、英特爾週四接棒，市場聚焦AI投資是否開始產生實質回報。</div></div>
-<div class="news-item"><div class="news-title"><a href="https://www.forbes.com/sites/investor-hub/article/fed-meeting-tracker-interest-rate-strategy/" target="_blank">Fed 7月29日決議前瞻：市場預期新主席Warsh按兵不動</a></div><div class="news-meta">Forbes · 2026-07</div><div class="news-summary">市場預期Fed本月維持利率於3.5%-3.75%區間的機率約95%，6月點陣圖顯示官員因通膨預估上修而分歧，多數傾向暫不降息。</div></div>
-<div class="news-item"><div class="news-title"><a href="https://ic.com/blog/ic-europe-fundamental-forecast-20-july-2026/" target="_blank">歐洲央行週四利率決議在即，歐元交易員謹慎布局</a></div><div class="news-meta">IC Markets · 2026-07-20</div><div class="news-summary">歐元本週開盤偏謹慎但有支撐，市場在7月23日ECB政策會議前觀望，同時關注中東局勢推升的能源通膨風險。</div></div>
-
+  <div class="news-item">
+  <div class="news-title"><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-02-2026" target="_blank">Stock Market Today (Sept. 2, 2026): S&P 500 futures fall as oil prices rise and bond yields climb</a></div>
+  <div class="news-meta">TheStreet · 2026-09-02</div>
+  <div class="news-summary">美伊衝突再度升溫推升原油與公債殖利率，美股期貨走弱，8月ADP民間就業增幅不及預期。</div>
+</div>
+<div class="news-item">
+  <div class="news-title"><a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-september-2-dow-sp-500-nasdaq-082624175.html" target="_blank">Stock market today: Dow, S&P 500, Nasdaq futures fall as US-Iran war escalates, inflation jitters return</a></div>
+  <div class="news-meta">Yahoo Finance · 2026-09-02</div>
+  <div class="news-summary">美股期貨走低，10年期公債殖利率升至4.79%，市場對Fed 9月升息機率預期升溫。</div>
+</div>
+<div class="news-item">
+  <div class="news-title"><a href="https://www.cnbc.com/2026/08/31/markets-see-warsh-endorsing-a-rate-hike-in-september-not-everyone-is-convinced.html" target="_blank">Markets see Warsh endorsing a rate hike in September. Not everyone is convinced</a></div>
+  <div class="news-meta">CNBC · 2026-08-31</div>
+  <div class="news-summary">Fed主席Warsh於Jackson Hole談話後，CME FedWatch顯示市場對9月升息機率一度升至逾六成。</div>
+</div>
+<div class="news-item">
+  <div class="news-title"><a href="https://www.cnbc.com/2026/08/31/stock-market-today-live-updates.html" target="_blank">Dow falls more than 400 points, oil rises after new U.S. strikes against Iran</a></div>
+  <div class="news-meta">CNBC · 2026-08-31</div>
+  <div class="news-summary">美國對伊朗發動新一輪空襲，道瓊指數重挫逾400點，原油價格同步走高。</div>
+</div>
+<div class="news-item">
+  <div class="news-title"><a href="https://www.cnbc.com/2026/08/30/stock-market-today-live-updates.html" target="_blank">Dow tumbles 370 points after U.S. strikes Iran, but index posts fifth straight winning month</a></div>
+  <div class="news-meta">CNBC · 2026-08-30</div>
+  <div class="news-summary">儘管美伊軍事衝突拖累當日走勢，道瓊指數仍寫下連續第五個月上漲的紀錄。</div>
+</div>
+<div class="news-item">
+  <div class="news-title"><a href="https://www.fool.com/coverage/stock-market-today/2026/09/01/stock-market-midday-sept-1-stocks-slide-on-global-bond-sell-off/" target="_blank">Stock Market Midday, Sept. 1: Stocks Slide on Global Bond Sell-Off</a></div>
+  <div class="news-meta">The Motley Fool · 2026-09-01</div>
+  <div class="news-summary">全球公債遭大舉拋售、殖利率飆升至多年高點，美股周二盤中走跌。</div>
+</div>
+<div class="news-item">
+  <div class="news-title"><a href="https://www.bloomberg.com/news/articles/2026-09-01/stock-market-today-dow-s-p-live-updates" target="_blank">Stock Market Today: Dow, S&P Live Updates for September 2</a></div>
+  <div class="news-meta">Bloomberg · 2026-09-01</div>
+  <div class="news-summary">Bloomberg即時報導指出，美股在地緣政治風險與利率疑慮交織下呈現震盪走勢。</div>
+</div>
+<div class="news-item">
+  <div class="news-title"><a href="https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-1-dow-sp-500-nasdaq-080617884.html" target="_blank">Stock market today: Dow, S&P 500, Nasdaq drop as oil tops $95, bond yields rise</a></div>
+  <div class="news-meta">Yahoo Finance · 2026-09-01</div>
+  <div class="news-summary">布蘭特原油突破每桶95美元、公債殖利率走升，美股三大指數周二同步收黑。</div>
+</div>
 </section>
 
 <section id="sec2">
   <h2><span class="num">2</span> 大盤與開盤情況</h2>
-  <table>
-  <thead>
-    <tr><th>指標</th><th>最新數值（開盤後約一小時）</th><th>漲跌幅 / 動向</th><th>備註</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>S&amp;P 500</td><td>點位查無資料</td><td>約 +0.5%</td><td>開盤後走高，晶片股領漲（Yahoo Finance 盤中報導）</td></tr>
-    <tr><td>Nasdaq 綜合指數</td><td>點位查無資料</td><td>約 +0.8%</td><td>大型科技股財報週（Alphabet、特斯拉週三公布）前買盤進駐</td></tr>
-    <tr><td>道瓊工業指數</td><td>約 52,267</td><td>+120.98 點（約 +0.23%~0.3%）</td><td>盤中報價；盤前期貨僅小漲 0.02%</td></tr>
-    <tr><td>VIX 恐慌指數</td><td>18.09</td><td>-3.62%</td><td>雖有美伊衝突，避險情緒反而降溫</td></tr>
-    <tr><td>美元指數 DXY</td><td>約 100.73</td><td>-0.04%（持平偏強）</td><td>中東地緣風險支撐避險買盤，美元開週偏堅挺</td></tr>
-    <tr><td>美國10年期公債殖利率</td><td>上週五收約 4.56%-4.57%（今日開盤後最新數據查無資料）</td><td>週一債券承壓、殖利率偏升</td><td>油價升破90美元重燃通膨疑慮，週末美債遭拋售（Bloomberg）</td></tr>
-  </tbody>
+  <table class="market-table">
+<tr><th>指標</th><th>數值</th><th>漲跌幅</th><th>備註</th></tr>
+<tr><td>S&P 500</td><td>ES期貨 7,623.00</td><td>-19.75 (-0.26%)</td><td>資料為S&P 500期貨(ES=F)盤前數據(9/2美東時間約5:00 AM)，非當日正式開盤數值；來源：Yahoo Finance</td></tr>
+<tr><td>Nasdaq</td><td>NQ期貨 28,948.00</td><td>-177.50 (-0.61%)</td><td>資料為Nasdaq-100期貨(NQ=F)盤前數據，非當日正式開盤數值；來源：Yahoo Finance</td></tr>
+<tr><td>Dow Jones</td><td>YM期貨 52,756.00</td><td>-72.00 (-0.14%)</td><td>資料為Dow期貨(YM=F)盤前數據，非當日正式開盤數值；來源：Yahoo Finance</td></tr>
+<tr><td>VIX</td><td>16.77</td><td>+0.43 (+2.63%)</td><td>盤前數據，反映美伊衝突升溫與升息疑慮升高；來源：Yahoo Finance</td></tr>
+<tr><td>DXY 美元指數</td><td>約99.60(開盤99.43，區間99.35–99.63)</td><td>+0.15%(近24小時)</td><td>美元指數走升，反映避險需求上升；來源：Investing.com/TradingEconomics相關頁面</td></tr>
+<tr><td>10年期美債殖利率</td><td>4.79%（盤中一度觸及4.814%）</td><td>續升，為2023年11月以來最高</td><td>受伊朗衝突推升油價、通膨疑慮加劇影響持續走升；來源：CNBC/Yahoo Finance(引述LSEG數據)</td></tr>
 </table>
-<p>隔夜亞股因能源成本上升而交投謹慎（日本適逢假期休市），歐股在週四歐洲央行決議前觀望；美股盤前期貨僅小漲（S&amp;P 500 期貨 +0.13%、Nasdaq 100 期貨 +0.43%）。</p>
-<p>開盤後隨著伊朗表態將透過調停者持續與美方外交接觸，布蘭特原油自每桶 91 美元高點回落，帶動三大指數同步走高、風險情緒回穩。ETF 資金流向與期權異常量今日查無公開資料，故從略。</p>
-
+<p class="data-note">資金流向：未提供（查無9/2當日具體ETF流入流出或期權異常量之公開數據；僅查得2026上半年全球ETF流入創紀錄逾1兆美元之背景資訊，非當日數據，故不列入表格）</p>
 </section>
 
 <section id="sec3">
   <h2><span class="num">3</span> 熱門股票一覽</h2>
-  <div class="stock-card"><div class="stock-header"><span class="stock-ticker">AMC</span><span class="stock-name">AMC院線娛樂</span><span class="stock-price">$2.23 +15.2%</span></div><div class="stock-body">今日盤前公布Q2財報意外轉盈：EPS $0.14大勝預期的-$0.06，營收15.97億美元創紀錄並優於預期（14.89億），調整後EBITDA 3.214億美元較預期高出61%，帶動股價飆漲逾15%（盤前一度+17.7%）。營業利益率由去年同期6.6%升至14.9%，自由現金流率11.9%，顯示暑期票房復甦帶動營運全面改善。<br><a href="https://stockstory.org/us/stocks/nyse/amc/news/earnings/amc-entertainment-nyseamc-reports-upbeat-q2-cy2026-stock-jumps-152percent" target="_blank">StockStory</a></div></div>
-<div class="stock-card"><div class="stock-header"><span class="stock-ticker">DPZ</span><span class="stock-name">達美樂披薩</span><span class="stock-price">$343.50（盤前） +7%</span></div><div class="stock-body">今日公布Q2財報：營收11.9億美元（年增4.3%）小幅優於預期的11.8億，但EPS $4.07不及預期的$4.17；美國同店銷售僅+0.1%，為一年多來最弱。儘管獲利與同店銷售遜色，供應鏈營收年增6.5%、全球淨增209家門市，加上股價今年已跌約23%，市場解讀利空出盡，股價反彈約7%。<br><a href="https://finance.yahoo.com/markets/stocks/articles/dominos-pizza-q2-2026-earnings-121001644.html" target="_blank">Yahoo Finance</a></div></div>
-<div class="stock-card"><div class="stock-header"><span class="stock-ticker">AMD</span><span class="stock-name">超微半導體</span><span class="stock-price">$513.05 +3.5%</span></div><div class="stock-body">微軟宣布將在其資料中心大規模部署AMD的Helios機架級方案（整合Instinct MI455X GPU、第六代EPYC「Venice」CPU），驅動Azure前沿模型AI推論，股價盤前一度漲4.5%~5%。Azure並將推出兩條採用Venice架構的新VM產品線；AMD本週三（7/22）Advancing AI大會與Zen 6發表為下一個催化劑。<br><a href="https://www.investing.com/news/stock-market-news/amd-stock-surges-5-as-microsoft-locks-in-massive-ai-infrastructure-deal-4801074" target="_blank">Investing.com</a></div></div>
-<div class="stock-card"><div class="stock-header"><span class="stock-ticker">STLD</span><span class="stock-name">鋼鐵動力</span><span class="stock-price">未提供（盤前漲近10%）</span></div><div class="stock-body">今日盤後將公布Q2財報，公司先前已上修財測至EPS $3.51~3.55（去年同期$2.01、上季$2.78），受惠鋼價漲幅超過廢鋼成本、金屬利差擴大；訂單積壓量年增近40%並排到2027年。惟因鋁板廠搬遷認列1,600萬美元資產減記，市場聚焦盤後正式數字，股價今早漲近10%。<br><a href="https://www.stocktitan.net/news/STLD/steel-dynamics-provides-second-quarter-2026-earnings-lugisf0qmloz.html" target="_blank">StockTitan</a></div></div>
-<div class="stock-card"><div class="stock-header"><span class="stock-ticker">HUT</span><span class="stock-name">Hut 8（AI資料中心/比特幣礦企）</span><span class="stock-price">未提供（盤前+12%）</span></div><div class="stock-body">與既有客戶簽下15年租約，德州1GW Beacon Point資料中心園區全面商業化，首階段合約基礎價值高達98億美元、平均年淨營運收益約6.55億美元，股價盤前大漲12%。Benchmark上週才將目標價自$85大幅調升至$165，看好其由挖礦轉型AI基礎設施的價值重估。<br><a href="https://www.cnbc.com/2026/07/20/stocks-making-the-biggest-moves-premarket-amd-spcx-dpz.html" target="_blank">CNBC</a></div></div>
-
+  <div class="stock-card">
+  <div class="stock-header">AVGO Broadcom Inc. <span class="stock-change">-1.17%</span></div>
+  <div class="stock-body">現價 $365.35，當日盤中下跌1.17%（區間 $364.80–$369.00）。公司訂於今日（9/2）美股收盤後公布Q3財報，市場預期AI半導體營收上看160億美元、年增逾200%，選擇權市場預估財報後股價恐震盪約7%，為今日最受矚目焦點股之一。來源：<a href="https://stockanalysis.com/stocks/avgo/" target="_blank">StockAnalysis.com</a>、<a href="https://www.tipranks.com/news/broadcom-earnings-today-wall-streets-last-minute-verdict-on-avgo-stock" target="_blank">TipRanks</a>（2026-09-02）</div>
+</div>
+<div class="stock-card">
+  <div class="stock-header">SNOW Snowflake Inc. <span class="stock-change">-2.79%</span></div>
+  <div class="stock-body">現價 $310.87，當日盤中下跌2.79%（區間 $310.81–$312.18）。公司訂於今日（9/2）美股收盤後公布Q2 FY27財報，今年來股價已上漲逾46%，財報前技術面出現空頭背離疑慮，投資人觀望財報結果能否延續AI題材動能。來源：<a href="https://stockanalysis.com/stocks/snow/" target="_blank">StockAnalysis.com</a>、<a href="https://invezz.com/news/2026/09/02/snowflake-stock-forms-bearish-divergence-as-earnings-loom-will-it-rise-or-crash/" target="_blank">Invezz</a>（2026-09-02）</div>
+</div>
+<div class="stock-card">
+  <div class="stock-header">GTLB GitLab Inc. <span class="stock-change">+17.21%</span></div>
+  <div class="stock-body">現價 $52.85，大漲17.21%（區間 $50.27–$55.37），逼近52週新高。受惠於9/1盤後公布的Q2財報優於預期、上調FY27營收指引，帶動今日股價延續強勢上攻，並吸引多家券商調升目標價。來源：<a href="https://stockanalysis.com/stocks/gtlb/" target="_blank">StockAnalysis.com</a>、<a href="https://www.barrons.com/articles/gitlab-earnings-stock-price-39e523b4" target="_blank">Barron's</a>（2026-09-02）</div>
+</div>
+<div class="stock-card">
+  <div class="stock-header">MU Micron Technology <span class="stock-change">+0.35%</span></div>
+  <div class="stock-body">現價 $936.70，小漲0.35%（區間 $927.40–$937.00）。記憶體概念股受台灣工會罷工疑慮及獲利了結賣壓影響，近期波動劇烈，股價已從高點回落逾20%，但今年來仍累計上漲逾220%，市場熱度居高不下。來源：<a href="https://stockanalysis.com/stocks/mu/" target="_blank">StockAnalysis.com</a>、<a href="https://www.tipranks.com/news/ai-chip-stocks-mu-sndk-amd-and-intc-extend-their-slide-in-pre-market-today-heres-whats-driving-the-selloff-september-2" target="_blank">TipRanks</a>（2026-09-02）</div>
+</div>
+<div class="stock-card">
+  <div class="stock-header">GPRO GoPro Inc. <span class="stock-change">近一週+140%（波動劇烈）</span></div>
+  <div class="stock-body">現價約 $1.23（近期波動劇烈，日內數據來源間略有出入，請以官方報價為準）。YouTuber Markiplier揭露持有GoPro 8.5%被動股權、成為最大個人股東，激勵散戶交易熱潮，兩個交易日累計暴漲約140%，並與Starman Optical宣布2.85億美元合併案。來源：<a href="https://seekingalpha.com/news/4638610-gopro-skyrockets-after-youtube-creator-markiplier-becomes-its-largest-shareholder" target="_blank">Seeking Alpha</a>、<a href="https://www.benzinga.com/trading-ideas/movers/26/09/61550830/gopro-stock-rockets-140-as-markiplier-money-meets-a-short-squeeze" target="_blank">Benzinga</a>（2026-09-01/09-02）</div>
+</div>
 </section>
 
 <section id="sec4">
   <h2><span class="num">4</span> 財務數據分析（關鍵指標比較表）</h2>
-  <table>
-<thead><tr><th>代號</th><th>營收</th><th>EPS</th><th>毛利率</th><th>P/E</th><th>P/B</th><th>一句話評註</th></tr></thead>
-<tbody>
-<tr><td>AMC</td><td>優於預期（15.97億 vs 預期14.89億美元）</td><td>優於預期（$0.14 vs 預期-$0.06）</td><td>未提供（營業利益率14.9%）</td><td>未提供</td><td>未提供</td><td>意外轉盈、營收創紀錄，票房復甦帶動基本面明顯改善。</td></tr>
-<tr><td>DPZ</td><td>優於預期（11.9億 vs 預期11.8億美元）</td><td>低於預期（$4.07 vs 預期$4.17）</td><td>未提供</td><td>未提供</td><td>未提供</td><td>同店銷售近乎停滯，但跌深後市場視為利空出盡而反彈。</td></tr>
-<tr><td>AMD</td><td>未提供（本季財報尚未公布）</td><td>未提供（本季財報尚未公布）</td><td>未提供</td><td>162.71</td><td>未提供</td><td>微軟Helios大單確立AI基建地位，惟估值已高，關注7/22發表會。</td></tr>
-<tr><td>STLD</td><td>未提供（今日盤後公布）</td><td>財測$3.51~3.55 vs 市場預期$3.66（今日盤後公布）</td><td>未提供</td><td>25.23</td><td>未提供</td><td>金屬利差擴大、訂單排到2027，今晚財報為驗證時刻。</td></tr>
-<tr><td>HUT</td><td>未提供（非財報事件）</td><td>未提供（非財報事件）</td><td>未提供</td><td>未提供</td><td>未提供</td><td>98億美元長約使AI資料中心轉型獲市場大幅重估。</td></tr>
-</tbody>
+  <table class="finance-table">
+<tr><th>代號</th><th>營收</th><th>EPS</th><th>毛利率</th><th>P/E</th><th>P/B</th><th>亮點/利空</th></tr>
+<tr>
+<td>AVGO</td>
+<td>TTM $75.47B（+32.3% YoY）；Q3 FY26市場共識預估 $29.43B（+84% YoY），今日盤後公布</td>
+<td>TTM EPS $6.01；Q3非GAAP共識預估 $3.24（尚未公布，優於/低於預期未提供）</td>
+<td>約76.28%（公司預期本季降至約74%）</td>
+<td>61.52（Forward 23.43）</td>
+<td>未提供</td>
+<td>AI半導體營收指引上看160億美元、年增逾200%，但AI ASIC產品組合毛利率較低，市場憂心獲利品質；選擇權市場預估財報後股價震盪約7%。來源：<a href="https://stockanalysis.com/stocks/avgo/" target="_blank">StockAnalysis.com</a>、<a href="https://www.tipranks.com/news/broadcom-earnings-today-wall-streets-last-minute-verdict-on-avgo-stock" target="_blank">TipRanks</a>（2026-09-02）</td>
+</tr>
+<tr>
+<td>SNOW</td>
+<td>TTM $5.03B（+31.1% YoY）；Q2 FY27市場共識預估 $1.47B（+28.77% YoY），今日盤後公布</td>
+<td>TTM EPS -3.51（GAAP虧損）；Q2非GAAP共識預估 $0.45（尚未公布，優於/低於預期未提供）</td>
+<td>非GAAP產品毛利率FY27全年指引約75%（單季數字未提供）</td>
+<td>n/a（GAAP虧損，Forward 150.83）</td>
+<td>未提供</td>
+<td>今年來股價已上漲逾46%，技術面出現空頭背離疑慮，財報為檢驗AI題材能否延續動能的關鍵。來源：<a href="https://stockanalysis.com/stocks/snow/" target="_blank">StockAnalysis.com</a>、<a href="https://invezz.com/news/2026/09/02/snowflake-stock-forms-bearish-divergence-as-earnings-loom-will-it-rise-or-crash/" target="_blank">Invezz</a>（2026-09-02）</td>
+</tr>
+<tr>
+<td>GTLB</td>
+<td>Q2 FY27實際 $286.3M（優於預期，共識 $273.4M）</td>
+<td>Q2實際 $0.24（優於預期，共識 $0.18）</td>
+<td>未提供</td>
+<td>n/a（GAAP虧損，Forward 59.29）</td>
+<td>未提供</td>
+<td>Net ARR年增逾40%，上調FY27營收指引至$1.129B–$1.133B，AI Duo產品動能強勁，帶動股價單日大漲逾17%、逼近52週新高，多家券商調升目標價。來源：<a href="https://stockanalysis.com/stocks/gtlb/" target="_blank">StockAnalysis.com</a>、<a href="https://www.tipranks.com/news/the-fly/gitlab-reports-q2-eps-24c-consensus-18c-thefly-news" target="_blank">TheFly/TipRanks</a>（2026-09-01/09-02）</td>
+</tr>
+<tr>
+<td>MU</td>
+<td>TTM $90.27B（+167.0% YoY）</td>
+<td>TTM EPS $44.31（+705.7% YoY）；下次財報9/30，優於/低於預期未提供</td>
+<td>公司FY26 Q4指引約86%（guidance）</td>
+<td>21.06（Forward 6.49）</td>
+<td>未提供</td>
+<td>AI記憶體需求推升股價今年累計上漲逾220%，但近期受台灣工會罷工疑慮及獲利了結影響，股價已從高點拉回逾20%，波動加劇。來源：<a href="https://stockanalysis.com/stocks/mu/" target="_blank">StockAnalysis.com</a>、<a href="https://www.tipranks.com/news/ai-chip-stocks-mu-sndk-amd-and-intc-extend-their-slide-in-pre-market-today-heres-whats-driving-the-selloff-september-2" target="_blank">TipRanks</a>（2026-09-02）</td>
+</tr>
+<tr>
+<td>GPRO</td>
+<td>未提供</td>
+<td>未提供</td>
+<td>未提供</td>
+<td>未提供</td>
+<td>未提供</td>
+<td>YouTuber Markiplier揭露持有8.5%被動股權、成為最大個人股東，激勵散戶交易熱潮，兩個交易日暴漲約140%，並與Starman Optical宣布2.85億美元合併案；波動劇烈疑似軋空行情，基本面財務數據搜尋結果未提供。來源：<a href="https://seekingalpha.com/news/4638610-gopro-skyrockets-after-youtube-creator-markiplier-becomes-its-largest-shareholder" target="_blank">Seeking Alpha</a>、<a href="https://www.benzinga.com/trading-ideas/movers/26/09/61550830/gopro-stock-rockets-140-as-markiplier-money-meets-a-short-squeeze" target="_blank">Benzinga</a>（2026-09-01/09-02）</td>
+</tr>
 </table>
-
 </section>
 
 <section id="sec5">
   <h2><span class="num">5</span> 新興公司與產業鏈知識</h2>
   <div class="stock-card">
-  <div class="stock-header"><span class="stock-ticker">CSQR</span><span class="stock-name">Csquare, Inc.</span></div>
+  <div class="stock-header">LIDR AEye, Inc.</div>
   <div class="stock-body">
-    Csquare 是 Brookfield 支持的資料中心託管（colocation）與互連服務商，總部位於達拉斯，由 Cyxtera 與 Evoque 合併而成，在北美與英國營運逾 60 座資料中心，營收多來自一至七年期的經常性合約。話題點在於它是本週（7/16）剛在紐約證交所掛牌的 AI 基建新股：IPO 定價每股 21 美元、低於原先 23 至 27 美元的行銷區間，募資約 10.5 億美元，首日收盤小跌約 1.6%，市值約 32.4 億美元。這反映即使身處 AI 資料中心熱潮，市場對新股估值仍然謹慎。主要風險包括：新上市股票波動大、定價低於區間顯示需求偏弱，且須直面 Equinix、Digital Realty 等規模更大的既有業者競爭。<br>
-    <a href="https://www.tradingview.com/news/reuters.com,2026:newsml_L4N43I1JM:0-brookfield-backed-csquare-valued-at-3-24-billion-as-shares-fall-in-nyse-debut/" target="_blank">TradingView（Reuters）· 2026-07-16</a> ｜
-    <a href="https://www.iposcoop.com/the-ipo-buzz-csquare-csqr-prices-ipo-at-21-2-below-range/" target="_blank">IPOScoop · 2026-07</a>
+    AEye 是一家專注於光達（LiDAR）感測技術的美股小型股，過去主要應用在汽車自動駕駛、國防與工業偵測領域。話題性來自它「跨界進太空」：公司於2026年9月1日宣布，其旗艦產品 Apollo 長程光達獲登月新創 Lunar Outpost 選用，將裝載於「Pegasus」月球車上，協助 NASA Artemis 任務的太空人在月球表面進行地形偵測、避障與自動導航。這是 AEye 首次切入「太空移動」這個全新市場，跳脫原本的車用與國防業務範疇，Pegasus 月球車預計於2028年發射，服務月球南極的太空人任務。消息公布當日 LIDR 股價出現反應，創下近三個月的關鍵價位表現。
+    <br><br>
+    來源：<a href="https://finance.yahoo.com/technology/articles/aeye-apollo-lidar-selected-lunar-110000658.html" target="_blank" rel="noopener">Yahoo Finance（2026-09-01）</a>、<a href="https://www.stocktitan.net/news/LIDR/a-eye-s-apollo-tm-lidar-selected-by-lunar-outpost-for-pegasus-lunar-vi9jjjt1c5no.html" target="_blank" rel="noopener">StockTitan（2026-09-01）</a>
   </div>
 </div>
 
 <div class="stock-card">
-  <div class="stock-header"><span class="stock-ticker">MOD</span><span class="stock-name">Modine Manufacturing</span></div>
+  <div class="stock-header">RZLV Rezolve Ai PLC</div>
   <div class="stock-body">
-    Modine 原本是傳統汽車散熱零件供應商，近年成功轉型為資料中心冷卻設備要角，旗下 Airedale 品牌是少數能量產 AI 伺服器機櫃專用冷卻設備的美國廠商。話題點：公司 5 月底宣布一筆至 2029 年、總值逾 40 億美元的長期產能協議（含 1.65 億美元客戶預付款），上季（2026 會計年度第四季）營收年增近四成；7/17 股價上漲約 3%，市場在 7/29 財報前重新關注其資料中心成長故事。風險在於股價已反映高成長預期，若超大規模業者資本支出放緩或財報展望不如預期，回檔壓力不小；汽車等傳統業務也仍占相當比重。<br>
-    <a href="https://www.quiverquant.com/news/Modine+gains+as+investors+revisit+data+center+growth+story+ahead+of+earnings" target="_blank">QuiverQuant · 2026-07-17</a> ｜
-    <a href="https://finance.yahoo.com/news/riding-ai-data-center-cooling-130100487.html" target="_blank">Yahoo Finance · 2026-07</a>
+    Rezolve Ai 是一家專注於「代理式商務（Agentic Commerce）」基礎設施的新興 AI 公司，替企業打造讓 AI 代理人直接完成搜尋、比價、下單、付款的商務基礎建設，並與微軟、Google、Tata Consultancy Services、Tech Mahindra 等大型企業建立通路合作。話題性在於財報反差：公司於2026年9月1日公布，2026上半年營收達1.308億美元，年增近21倍（約1,970%），客戶數由950家成長至逾1,640家，並重申全年營收指引約3.6億美元、力拚2026年底年化經常性收入（ARR）達5億美元以上。但由於淨損同步擴大至1.395億美元、燒錢速度快，市場擔憂獲利能力，股價當天盤前一度下跌逾13%，早盤跌幅擴大至近19-20%，形成「營收暴衝、股價卻重挫」的鮮明反差話題。
+    <br><br>
+    來源：<a href="https://www.globenewswire.com/news-release/2026/09/01/3354074/0/en/rezolve-ai-reports-130-8-million-h1-revenue-up-nearly-21-fold-as-google-validates-its-infrastructure-strategy-for-the-agentic-economy.html" target="_blank" rel="noopener">GlobeNewswire（2026-09-01）</a>、<a href="https://www.fool.com/investing/2026/09/01/why-rezolve-ai-stock-crashed-today/" target="_blank" rel="noopener">The Motley Fool（2026-09-01）</a>
   </div>
 </div>
 
-<table>
-  <thead>
-    <tr><th>環節</th><th>代表企業</th><th>趨勢一句話</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>上游｜晶片與記憶體</td>
-      <td>NVIDIA、SK 海力士（7/10 剛以 ADR 在那斯達克掛牌，首日漲 13%）</td>
-      <td>AI 算力晶片與 HBM 記憶體仍供不應求，是整條產業鏈的源頭。</td>
-    </tr>
-    <tr>
-      <td>中游｜冷卻、電力與設備</td>
-      <td>Modine（冷卻）、MYR Group（電力工程）、Amtech（封裝設備）</td>
-      <td>電力與散熱成為資料中心擴建的最大瓶頸，相關廠商訂單能見度拉長。</td>
-    </tr>
-    <tr>
-      <td>下游｜資料中心營運與雲端</td>
-      <td>Csquare、Equinix、Digital Realty；微軟、亞馬遜等雲端巨頭</td>
-      <td>超大規模業者資本支出持續創高，但市場已開始對估值與新股定價更挑剔。</td>
-    </tr>
-  </tbody>
+<table class="chain-table">
+<tr><th>產業鏈位置</th><th>代表公司</th><th>說明</th></tr>
+<tr><td>上游</td><td>AEye（LIDR）、Fibertek Inc</td><td>提供光達雷射感測核心元件與抗惡劣環境（極端溫差、太空輻射、月塵）硬體技術，是「眼睛」角色，負責偵測距離、障礙物與地形。</td></tr>
+<tr><td>中游</td><td>Lunar Outpost、Astrolab、Lockheed Martin</td><td>將感測元件整合進月球車／太空載具本體，開發自動導航與駕駛控制系統，是載具「大腦與身體」的系統整合商，直接與 NASA 簽約承接任務。</td></tr>
+<tr><td>下游</td><td>NASA Artemis 任務、商業登月服務業者</td><td>最終應用端，將整合完成的月球車投入載人登月任務、月球南極基地建設等實際場景，帶動整條太空移動供應鏈的長期需求。</td></tr>
 </table>
-
 </section>
 
 <section id="sec6">
   <h2><span class="num">6</span> Jia 的持股分析</h2>
   <div class="disclaimer">以下「操作建議」純屬參考意見，<b>非投資建議</b>，請自行判斷並承擔投資風險。股價為查詢當下市場報價，可能與實際下單時有時間差。</div>
-  <table><thead><tr><th>代號</th><th>名稱</th><th>股數</th><th>平均成本</th><th>現價</th><th>當日漲跌</th><th>未實現損益</th><th>目標價／評等</th><th>傾向判斷</th></tr></thead><tbody><tr>
-  <td>AAPL</td><td>蘋果</td><td>4.0645</td><td>$173.53</td><td>$333.69</td>
-  <td class="gain">+0.13%</td>
-  <td class="gain">+$650.97（+92.29%）</td>
-  <td>平均 $318.25（區間 $250–$400）；47位分析師，評等「買進」（29買／4賣）</td>
-  <td><span class="pill pill-hold">持有</span> 股價已站上分析師平均目標價之上，漲多續抱但不宜追高。</td>
+  <table><thead><tr><th>代號</th><th>股數</th><th>平均成本</th><th>現價</th><th>當日漲跌</th><th>未實現損益</th><th>目標價／評等</th><th>傾向判斷</th></tr></thead><tbody><tr>
+  <td>AAPL</td>
+  <td>4.0645</td>
+  <td>$173.53</td>
+  <td>$324.34</td>
+  <td class="negative">-0.24%</td>
+  <td class="positive">+$612.97 (+86.90%)</td>
+  <td>$215–$400（均$324.45）/ Buy</td>
+  <td><span class="pill pill-hold">持有</span> 目標價僅與現價持平，上漲空間有限但獲利已豐厚，暫維持觀望（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>ABBV</td><td>艾伯維</td><td>1.1282</td><td>$113.86</td><td>$254.49</td>
-  <td class="gain">+0.04%</td>
-  <td class="gain">+$158.66（+123.51%）</td>
-  <td>平均約 $253.55–$263.30（高標 $271.50）；評等「買進」（28%強力買進／56%買進／17%持有）</td>
-  <td><span class="pill pill-hold">持有</span> 現價已貼近平均目標價，7/31財報前先續抱觀察。</td>
+  <td>ABBV</td>
+  <td>1.1282</td>
+  <td>$113.86</td>
+  <td>$259.99</td>
+  <td class="positive">+1.39%</td>
+  <td class="positive">+$164.86 (+128.34%)</td>
+  <td>均$276.59（+6.39%）/ Buy</td>
+  <td><span class="pill pill-hold">持有</span> 評等買入，免疫學藥品線動能穩健，獲利已高可續抱收息（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>ADBE</td><td>奧多比（Adobe）</td><td>1</td><td>$354.20</td><td>$233.81</td>
-  <td class="loss">約-1.5%</td>
-  <td class="loss">-$120.39（-33.99%）</td>
-  <td>平均 $272.48（區間 $190–$380）；39位分析師，評等「持有」（13買／23持／3賣）</td>
-  <td><span class="pill pill-hold">持有</span> CEO交接與AI競爭疑慮壓抑評價，評等以持有為主，暫不加碼也不停損。</td>
+  <td>ADBE</td>
+  <td>1</td>
+  <td>$354.20</td>
+  <td>$286.08</td>
+  <td class="negative">-2.29%</td>
+  <td class="negative">-$68.12 (-19.23%)</td>
+  <td>均$274.37（-4.09%）/ Hold</td>
+  <td><span class="pill pill-hold">持有</span> 評等中立且目標價低於現價，AI競爭疑慮未散，暫不加碼觀察9/10財報（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>AMZN</td><td>亞馬遜</td><td>1</td><td>$124.00</td><td>$247.23</td>
-  <td class="loss">-1.06%</td>
-  <td class="gain">+$123.23（+99.38%）</td>
-  <td>平均 $314.23（區間 $207–$370）；65位分析師，評等「強力買進」（近月47買／0賣）</td>
-  <td><span class="pill pill-buy">加碼</span> 全數買進評等且上檔空間約27%，回檔提供加碼機會。</td>
+  <td>AMZN</td>
+  <td>1</td>
+  <td>$124.00</td>
+  <td>$254.09</td>
+  <td class="negative">-0.33%</td>
+  <td class="positive">+$130.09 (+104.91%)</td>
+  <td>均$327.67（+28.96%）/ Strong Buy</td>
+  <td><span class="pill pill-buy">加碼</span> 分析師強力買入，AWS雲端成長動能強，FTC訴訟為短期雜音可逢低布局（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>BRK.B</td><td>波克夏海瑟威B</td><td>1</td><td>$449.00</td><td>$497.33</td>
-  <td class="gain">+0.75%</td>
-  <td class="gain">+$48.33（+10.76%）</td>
-  <td>平均約 $513.72–$535（區間 $500–$570）；評等「中等買進」（2買／2持有）</td>
-  <td><span class="pill pill-hold">持有</span> 防禦型核心部位，估值合理、上檔溫和，續抱即可。</td>
+  <td>BRK.B</td>
+  <td>1</td>
+  <td>$449.00</td>
+  <td>$505.00</td>
+  <td class="positive">+0.53%</td>
+  <td class="positive">+$56.00 (+12.47%)</td>
+  <td>均$547.67（+8.45%，僅4位分析師覆蓋）/ Buy</td>
+  <td><span class="pill pill-hold">持有</span> 基本面穩健但上漲空間有限，覆蓋分析師樣本少，續抱為宜（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>DIS</td><td>華特迪士尼</td><td>3</td><td>$119.03</td><td>$97.67</td>
-  <td class="loss">-2.05%</td>
-  <td class="loss">-$64.08（-17.95%）</td>
-  <td>平均約 $129.94–$130.60（區間 $110–$164）；29位分析師，評等「買進」（27買／3持／1賣）</td>
-  <td><span class="pill pill-add">逢低加碼</span> 股價近52週低點但買進評等一面倒、上檔空間逾30%，可分批承接。</td>
+  <td>DIS</td>
+  <td>3</td>
+  <td>$119.03</td>
+  <td>$106.22</td>
+  <td class="negative">-1.24%</td>
+  <td class="negative">-$38.43 (-10.76%)</td>
+  <td>$88–$160（均$127.84）/ Strong Buy</td>
+  <td><span class="pill pill-buy">加碼</span> 評等強力買入且上漲空間逾20%，主題樂園與串流動能可逢低布局（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>GOOG</td><td>Alphabet（Google母公司）</td><td>3</td><td>$316.83</td><td>$346.12</td>
-  <td class="loss">-2.17%</td>
-  <td class="gain">+$87.87（+9.24%）</td>
-  <td>平均 $433.14（64位分析師）；評等「強力買進」；BMO目標 $455、美銀 $430</td>
-  <td><span class="pill pill-buy">加碼</span> 強力買進共識、上檔空間約25%，今日回檔反是加碼點。</td>
+  <td>GOOG</td>
+  <td>3</td>
+  <td>$316.83</td>
+  <td>$332.03</td>
+  <td class="negative">-1.01%</td>
+  <td class="positive">+$45.60 (+4.80%)</td>
+  <td>$340–$475（均$422.34，以GOOGL資料估算）/ Strong Buy</td>
+  <td><span class="pill pill-buy">加碼</span> 雲端與AI搜尋動能強勁，評等強力買入，可逢低分批加碼（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>JNJ</td><td>嬌生</td><td>0.0796</td><td>$164.57</td><td>$247.34</td>
-  <td class="loss">-2.56%</td>
-  <td class="gain">+$6.59（+50.31%）</td>
-  <td>平均約 $268.86–$269.95；23位分析師，評等「買進」（近三月共識偏強力買進）</td>
-  <td><span class="pill pill-hold">持有</span> 部位極小、屬防禦型持股，維持現狀即可。</td>
+  <td>JNJ</td>
+  <td>0.0796</td>
+  <td>$164.57</td>
+  <td>$271.19</td>
+  <td class="positive">+2.01%</td>
+  <td class="positive">+$8.49 (+64.78%)</td>
+  <td>均$272.50（+0.48%）/ Buy</td>
+  <td><span class="pill pill-hold">持有</span> 目標價與現價相近，防禦型醫療股獲利已高可續抱（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>KHC</td><td>卡夫亨氏</td><td>2.1999</td><td>$35.83</td><td>$25.08</td>
-  <td class="loss">-1.14%</td>
-  <td class="loss">-$23.65（-30.01%）</td>
-  <td>平均 $23.47（區間 $17–$42）；19位分析師，評等「持有」；摩根大通維持「減持」</td>
-  <td><span class="pill pill-trim">減碼/賣出</span> 平均目標價低於現價、評等偏空，基本面缺乏催化劑，宜趁反彈出脫。</td>
+  <td>KHC</td>
+  <td>2.1999</td>
+  <td>$35.83</td>
+  <td>$26.10</td>
+  <td class="positive">+0.89%</td>
+  <td class="negative">-$21.40 (-27.15%)</td>
+  <td>均$25.09（-3.87%）/ Hold</td>
+  <td><span class="pill pill-trim">減碼</span> 評等中立且目標價低於現價，基本面疲弱虧損擴大，建議減碼降低曝險（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>MU</td><td>美光科技</td><td>2</td><td>$1,040.00</td><td>$848.95</td>
-  <td class="loss">-0.50%</td>
-  <td class="loss">-$382.10（-18.37%）</td>
-  <td>平均約 $1,316.79–$1,569（區間 $361–$2,200）；評等「強力買進」（40買／0賣）</td>
-  <td><span class="pill pill-add">逢低加碼</span> 近週重挫逾12%波動劇烈（現價經兩來源交叉確認），惟分析師全面看多、上檔逾55%，宜小量分批。</td>
+  <td>MU</td>
+  <td>2</td>
+  <td>$1040.00</td>
+  <td>$958.73</td>
+  <td class="positive">+2.77%</td>
+  <td class="negative">-$162.54 (-7.81%)</td>
+  <td>$361–$2200（均$1515）/ Strong Buy</td>
+  <td><span class="pill pill-buy">加碼</span> AI記憶體需求強勁帶動獲利大增，評等強力買入，逢回可加碼（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>NKE</td><td>耐吉</td><td>3.1105</td><td>$96.46</td><td>$43.76</td>
-  <td class="loss">-1.82%</td>
-  <td class="loss">-$163.92（-54.63%）</td>
-  <td>平均 $49.55（區間 $23–$75）；評等偏「持有」（18買／32持／1賣）</td>
-  <td><span class="pill pill-hold">持有</span> 深度套牢但現階段殺低意義不大，評等以持有為主，等待轉機訊號再決定去留。</td>
+  <td>NKE</td>
+  <td>3.1105</td>
+  <td>$96.46</td>
+  <td>$38.12</td>
+  <td class="negative">-1.37%</td>
+  <td class="negative">-$181.47 (-60.48%)</td>
+  <td>$23–$94（均$50.52）/ Hold</td>
+  <td><span class="pill pill-hold">持有</span> 股價創12年新低反映轉型風險，評等中立，鉅額虧損部位不宜追加，續抱觀察（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>NVDA</td><td>輝達</td><td>22</td><td>$130.27</td><td>$202.81</td>
-  <td class="loss">-2.21%</td>
-  <td class="gain">+$1,595.88（+55.68%）</td>
-  <td>平均約 $301.62–$302.31（區間 $180–$500）；評等「強力買進」（近月79買／1持／0賣）</td>
-  <td><span class="pill pill-buy">加碼</span> 最大獲利部位，分析師近乎一致看多、上檔近50%，回檔可續加碼。</td>
+  <td>NVDA</td>
+  <td>22</td>
+  <td>$130.27</td>
+  <td>$219.41</td>
+  <td class="positive">+0.91%</td>
+  <td class="positive">+$1961.08 (+68.44%)</td>
+  <td>$180–$515（均$325.99）/ Strong Buy</td>
+  <td><span class="pill pill-buy">加碼</span> AI晶片龍頭地位穩固，評等強力買入，長期成長動能持續（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>ORCL</td><td>甲骨文</td><td>1</td><td>$179.50</td><td>$126.50</td>
-  <td class="loss">約-2.4%</td>
-  <td class="loss">-$53.00（-29.53%）</td>
-  <td>平均約 $251.85–$271.88；34位分析師，評等「買進」（35%強力買進／47%買進）</td>
-  <td><span class="pill pill-add">逢低加碼</span> 股價重挫後分析師目標價仍遠高於現價，惟AI資本支出疑慮未散，宜小額分批。</td>
+  <td>ORCL</td>
+  <td>1</td>
+  <td>$179.50</td>
+  <td>$142.24</td>
+  <td class="positive">+0.65%</td>
+  <td class="negative">-$37.26 (-20.76%)</td>
+  <td>$110–$400（均$242.69）/ Buy</td>
+  <td><span class="pill pill-buy">加碼</span> 雲端與AI基礎建設訂單暢旺，評等買入且目標價空間大，可逢低加碼（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>RUN</td><td>Sunrun（住宅太陽能）</td><td>10</td><td>$16.15</td><td>$11.85</td>
-  <td class="loss">-2.39%</td>
-  <td class="loss">-$43.00（-26.63%）</td>
-  <td>平均約 $18.19–$19.11（區間 $4.63–$30）；18位分析師，評等「買進」</td>
-  <td><span class="pill pill-hold">持有</span> 目標價雖具上檔但區間分歧極大、產業逆風未除，先持有不加碼。</td>
+  <td>RUN</td>
+  <td>10</td>
+  <td>$16.15</td>
+  <td>$8.37</td>
+  <td class="negative">-2.33%</td>
+  <td class="negative">-$77.80 (-48.17%)</td>
+  <td>均$15.97（+90.80%，惟近期多家券商下修目標）/ Buy</td>
+  <td><span class="pill pill-trim">減碼</span> 近期Wells Fargo、Citi、Goldman等多家券商連番下修目標價，基本面轉弱，建議減碼（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>SNDK</td><td>晟碟（SanDisk）</td><td>1</td><td>$1,930.00</td><td>$1,350.03</td>
-  <td class="loss">-3.99%</td>
-  <td class="loss">-$579.97（-30.05%）</td>
-  <td>平均約 $2,041.88–$2,144.14（區間 $1,000–$3,250）；評等「買進」（18買／4持／1賣）；美銀 $2,500、Susquehanna $3,250</td>
-  <td><span class="pill pill-add">逢低加碼</span> 自高點回檔約40%、波動極大（現價經兩來源交叉確認），惟目標價隱含近六成上檔，僅宜小量分批。</td>
+  <td>SNDK</td>
+  <td>1</td>
+  <td>$1930.00</td>
+  <td>$1536.87</td>
+  <td class="negative">-1.90%</td>
+  <td class="negative">-$393.13 (-20.37%)</td>
+  <td>$1000–$3600（均$2126）/ Buy</td>
+  <td><span class="pill pill-hold">持有</span> 股價波動劇烈且近期有大型基金出清持股，評等雖買入但建議先觀察不躁進（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>SPCX</td><td>太空探索科技（SpaceX）</td><td>2</td><td>$158.50</td><td>$123.99</td>
-  <td>約0.0%（與前收持平）</td>
-  <td class="loss">-$69.02（-21.77%）</td>
-  <td>無公開目標價資料；評等「買進」（27買／1賣）</td>
-  <td><span class="pill pill-hold">持有</span> IPO後跌約23%、今日觸及歷史低點，估值與獲利時程疑慮仍在，先觀望不攤平。</td>
+  <td>SPCX</td>
+  <td>2</td>
+  <td>$158.50</td>
+  <td>$142.23</td>
+  <td class="negative">-1.02%</td>
+  <td class="negative">-$32.54 (-10.27%)</td>
+  <td>$75–$800（均$219.22）/ Buy</td>
+  <td><span class="pill pill-hold">持有</span> 評等買入且上漲空間大，惟近期AI資料中心營運出現問題，建議持有觀察後續（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>TSLA</td><td>特斯拉</td><td>1</td><td>$432.00</td><td>$380.84</td>
-  <td class="loss">-2.61%</td>
-  <td class="loss">-$51.16（-11.84%）</td>
-  <td>平均約 $405.42–$425.49（區間 $125–$600）；評等「買進／持有」分歧</td>
-  <td><span class="pill pill-hold">持有</span> 7/22財報在即、多空目標價分歧極大，財報前不動作。</td>
+  <td>TSLA</td>
+  <td>1</td>
+  <td>$432.00</td>
+  <td>$351.65</td>
+  <td class="negative">-1.25%</td>
+  <td class="negative">-$80.35 (-18.60%)</td>
+  <td>$125–$600（均$390.09）/ Buy</td>
+  <td><span class="pill pill-hold">持有</span> 即將舉行Cybercab發表會為短期波動催化劑，評等買入但上漲空間有限，建議觀望（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>TSM</td><td>台積電（ADR）</td><td>1</td><td>$227.50</td><td>$398.37</td>
-  <td class="loss">-2.77%</td>
-  <td class="gain">+$170.87（+75.11%）</td>
-  <td>平均 $520.37（區間 $354–$700）；評等「強力買進」（18買／0賣）</td>
-  <td><span class="pill pill-buy">加碼</span> AI晶圓代工龍頭、零賣出評等且上檔約30%，回檔即是加碼機會。</td>
+  <td>TSM</td>
+  <td>1</td>
+  <td>$227.50</td>
+  <td>$415.36</td>
+  <td class="positive">+0.33%</td>
+  <td class="positive">+$187.86 (+82.58%)</td>
+  <td>$440–$700（均$554.45）/ Strong Buy</td>
+  <td><span class="pill pill-buy">加碼</span> AI晶片代工龍頭地位穩固，評等強力買入，長期成長動能佳（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>UBER</td><td>優步</td><td>3</td><td>$82.18</td><td>$72.46</td>
-  <td class="loss">-2.13%</td>
-  <td class="loss">-$29.16（-11.83%）</td>
-  <td>平均約 $104.01–$108.43（區間 $70–$150）；評等「強力買進」（51買／3持／0賣）</td>
-  <td><span class="pill pill-add">逢低加碼</span> 強力買進共識、上檔空間逾40%，套牢幅度尚淺可分批攤平。</td>
+  <td>UBER</td>
+  <td>3</td>
+  <td>$82.18</td>
+  <td>$75.24</td>
+  <td class="negative">-0.54%</td>
+  <td class="negative">-$20.82 (-8.45%)</td>
+  <td>$70–$150（均$101.81）/ Buy</td>
+  <td><span class="pill pill-buy">加碼</span> 剛宣布裁員10%強化成本紀律，評等買入且上漲空間逾30%，可逢低布局（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>WBD</td><td>華納兄弟探索</td><td>3</td><td>$26.49</td><td>$26.87</td>
-  <td class="loss">-1.54%</td>
-  <td class="gain">+$1.14（+1.43%）</td>
-  <td>目標價分歧：約 $19.85–$29.92（近三月 $26–$31）；評等「持有」</td>
-  <td><span class="pill pill-hold">持有</span> 與Paramount的1,100億美元合併案遭12州反壟斷訴訟，結果未明前僅持有觀望。</td>
+  <td>WBD</td>
+  <td>3</td>
+  <td>$26.49</td>
+  <td>$28.32</td>
+  <td class="negative">-0.74%</td>
+  <td class="positive">+$5.49 (+6.91%)</td>
+  <td>$26–$31.25（均$29.82）/ Hold</td>
+  <td><span class="pill pill-hold">持有</span> 評等中立，與Paramount併購案仍卡在司法訴訟中具不確定性，建議續抱觀望（非投資建議，僅供參考）</td>
 </tr>
-<tr class="summary">
-  <td colspan="3">投資組合彙總（20檔）</td>
-  <td>總成本 $11,979.96</td>
-  <td>總現值 $13,244.05</td>
-  <td>—</td>
-  <td class="gain">+$1,264.09（+10.55%）</td>
-  <td colspan="2">獲利集中於 NVDA、GOOG、AAPL、TSM；虧損集中於記憶體（MU、SNDK）與消費股（NKE、KHC）</td>
-</tr>
-</tbody></table><p class="disclaimer">以上為資訊整理，非投資建議。資料為2026年7月20日盤中查詢之搜尋結果整理，價格可能有延遲；MU、SNDK等高波動個股現價已經兩個來源交叉確認。</p>
-
+<tr class="summary-row"><td colspan="8">總成本: $11,979.96 | 總現值: $14,038.54 | 總損益: +$2,058.58 (+17.18%)</td></tr></tbody></table>
 </section>
 
 <section id="sec7">
   <h2><span class="num">7</span> Yu 的持股分析</h2>
   <div class="disclaimer">以下所有「操作建議」僅供參考，<b>並非投資建議</b>。股價與目標價數據來自網路搜尋之即時/近期報導，可能與實際交易平台報價有時間差或誤差，請以實際交易頁面數據為準。</div>
-  <table><thead><tr><th>代號</th><th>名稱</th><th>股數</th><th>平均成本</th><th>現價</th><th>當日漲跌</th><th>未實現損益</th><th>目標價／評等</th><th>傾向判斷</th></tr></thead><tbody><tr>
-  <td>AAPL</td><td>蘋果</td><td>4.1114</td><td>$171.17</td><td>$333.69</td><td>約 +1.3%（各來源分歧：+0.14%～+2.7%）</td><td class="gain">+$668.18（+94.95%）</td><td>$318.25／買進（47位）</td><td><span class="pill pill-hold">持有</span> 現價已高於分析師平均目標價，漲多宜續抱觀望而非追高。</td>
+  <table><thead><tr><th>代號</th><th>股數</th><th>平均成本</th><th>現價</th><th>當日漲跌</th><th>未實現損益</th><th>目標價／評等</th><th>傾向判斷</th></tr></thead><tbody><tr>
+  <td>AAPL</td>
+  <td>4.1114</td>
+  <td>$171.17</td>
+  <td>$325.13</td>
+  <td class="positive">+2.61%</td>
+  <td class="positive">+$632.99 (+89.95%)</td>
+  <td>$215–$400（平均約$324–$337），評等：Moderate Buy（16買/11持有/4賣出）</td>
+  <td><span class="pill pill-hold">持有</span> 累積獲利已近90%，分析師平均目標價與現價相近、估值已反映樂觀預期，且執行長交接期增添不確定性，建議持有觀察（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>BRK.B</td><td>波克夏海瑟威B股</td><td>13</td><td>$371.04</td><td>$497.33</td><td class="gain">+0.75%</td><td class="gain">+$1,641.77（+34.04%）</td><td>$513.72～$520.33／買進（意見分歧）</td><td><span class="pill pill-hold">持有</span> 上檔空間僅約5%，作為防禦型核心部位續抱即可。</td>
+  <td>BRK.B</td>
+  <td>13</td>
+  <td>$371.04</td>
+  <td>$504.03</td>
+  <td class="negative">-0.04%</td>
+  <td class="positive">+$1,728.87 (+35.84%)</td>
+  <td>$510–$604（平均$547.67），評等：Buy（3家分析師：2買/2持有/0賣出）</td>
+  <td><span class="pill pill-hold">持有</span> 獲利穩健且目標價僅約8%上檔空間，屬穩健核心持股，適合續抱（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>DIS</td><td>華特迪士尼</td><td>6.1003</td><td>$144.68</td><td>$97.67（7/17收盤，今日盤中查無資料）</td><td class="loss">-2.05%</td><td class="loss">-$286.77（-32.49%）</td><td>$127.64／強力買進（31位）</td><td><span class="pill pill-add">分批加碼</span> 目標價隱含逾30%上檔空間，評等強力買進，可逢低分批布局。</td>
+  <td>DIS</td>
+  <td>6.1003</td>
+  <td>$144.68</td>
+  <td>$107.55</td>
+  <td class="negative">-0.51%</td>
+  <td class="negative">-$226.50 (-25.66%)</td>
+  <td>$88–$160（平均$127.84），評等：Strong Buy</td>
+  <td><span class="pill pill-hold">持有</span> 帳面虧損逾25%，但分析師維持強力買進評等且目標價有近19%上檔空間，建議觀察營運轉機再評估（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>GOOG</td><td>Alphabet（Google）C股</td><td>4.0027</td><td>$300.40</td><td>$347.26</td><td class="loss">-2.17%</td><td class="gain">+$187.57（+15.60%）</td><td>$433.14／強力買進（64位）</td><td><span class="pill pill-add">分批加碼</span> AI與雲端動能獲89%分析師看多，回檔提供加碼機會。</td>
+  <td>GOOG</td>
+  <td>4.0027</td>
+  <td>$300.40</td>
+  <td>$331.72</td>
+  <td class="negative">約-1.1%</td>
+  <td class="positive">+$125.36 (+10.43%)</td>
+  <td>平均約$422–$428（約+25%~28%上檔），評等：Strong Buy（56買/12持有/0賣出）</td>
+  <td><span class="pill pill-hold">持有</span> 分析師目標價仍具明顯上檔空間，惟近期AI部門人事異動（Jeff Dean離職等）增添短期不確定性，建議持有觀察（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>KO</td><td>可口可樂</td><td>62.0714</td><td>$60.57</td><td>$81.56</td><td class="loss">-3.96%</td><td class="gain">+$1,302.87（+34.65%）</td><td>$85.97／買進（25位）</td><td><span class="pill pill-hold">持有</span> Fairlife遭勒索軟體攻擊停產屬短期干擾，7/28財報前先觀望。</td>
+  <td>KO</td>
+  <td>62.0714</td>
+  <td>$60.57</td>
+  <td>$91.30</td>
+  <td class="negative">-0.76%</td>
+  <td class="positive">+$1,907.45 (+50.73%)</td>
+  <td>$75–$104（平均約$85.97–$94.7），評等：Buy</td>
+  <td><span class="pill pill-hold">持有</span> 獲利逾50%，屬防禦型高股息持股，現金流穩定，適合續抱領息（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>LITE</td><td>Lumentum（光通訊）</td><td>1</td><td>$870.00</td><td>$732.82（兩來源交叉確認）</td><td class="gain">+3.77%</td><td class="loss">-$137.18（-15.77%）</td><td>$1,104.89／買進</td><td><span class="pill pill-hold">持有</span> 當日振幅極大（650～747），AI光通訊題材仍在但波動劇烈，不宜追價。</td>
+  <td>LITE</td>
+  <td>1</td>
+  <td>$870.00</td>
+  <td>$868.69</td>
+  <td class="negative">-0.03%</td>
+  <td class="negative">-$1.31 (-0.15%)</td>
+  <td>$820–$1,400（平均約$1,101，惟不同來源數據差異大，宜謹慎參考），評等：Buy</td>
+  <td><span class="pill pill-hold">持有</span> 現價與成本大致打平，光通訊/AI基礎建設題材仍受分析師看好，可持續觀察（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>MO</td><td>奧馳亞（Altria）</td><td>9.4602</td><td>$43.65</td><td>$74.98</td><td>查無當日漲跌幅資料</td><td class="gain">+$296.39（+71.78%）</td><td>$70.36～$71.75／持有（中性）</td><td><span class="pill pill-trim">減碼</span> 現價已高於分析師目標價區間，評等僅中性，可部分獲利了結。</td>
+  <td>MO</td>
+  <td>9.4602</td>
+  <td>$43.65</td>
+  <td>$65.26</td>
+  <td class="negative">-4.11%</td>
+  <td class="positive">+$204.43 (+49.51%)</td>
+  <td>$59–$82（平均約$70.36–$71.39），評等：Hold</td>
+  <td><span class="pill pill-hold">持有</span> 獲利近50%，惟分析師評等中性、目標價上檔有限，屬收息型持股可續抱（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>MRVL</td><td>邁威爾科技（Marvell）</td><td>3</td><td>$273.64</td><td>$188.68（兩來源交叉確認）</td><td class="gain">+0.20%</td><td class="loss">-$254.88（-31.05%）</td><td>$252.56／強力買進（43位）</td><td><span class="pill pill-add">分批加碼</span> 近期隨半導體重挫約8.7%後，目標價仍隱含31%空間，可小量攤平。</td>
+  <td>MRVL</td>
+  <td>3</td>
+  <td>$273.64</td>
+  <td>$210.40</td>
+  <td class="negative">-0.60%</td>
+  <td class="negative">-$189.72 (-23.11%)</td>
+  <td>$126–$400（平均約$279.62，中位數$275），評等：Strong Buy</td>
+  <td><span class="pill pill-buy">加碼</span> 帳面虧損逾23%，但分析師強力買進且目標價約有33%上檔空間，AI/客製化晶片需求若回溫可望修復，可考慮逢低布局（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>MU</td><td>美光科技</td><td>3</td><td>$775.00</td><td>$848.95（兩來源交叉確認，區間804～904）</td><td class="loss">-0.50%</td><td class="gain">+$221.85（+9.54%）</td><td>約$1,486／強力買進（45位，0賣出）</td><td><span class="pill pill-add">分批加碼</span> 近月大跌25%但分析師目標價隱含約75%上檔，宜分批不重押。</td>
+  <td>MU</td>
+  <td>3</td>
+  <td>$775.00</td>
+  <td>$933.44</td>
+  <td class="negative">-2.64%</td>
+  <td class="positive">+$475.32 (+20.44%)</td>
+  <td>$361–$2,200（平均約$1,515，區間差異極大宜謹慎參考），評等：Strong Buy（44買/0賣出）</td>
+  <td><span class="pill pill-hold">持有</span> 記憶體循環景氣強勁、獲利已逾20%，分析師強力看多，惟目標價數據來源差異極大宜審慎看待，建議持有觀察（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>NVDA</td><td>輝達</td><td>44.0752</td><td>$80.24</td><td>$203.81</td><td class="gain">+0.49%</td><td class="gain">+$5,446.38（+154.00%）</td><td>$301.62／強力買進（61位）</td><td><span class="pill pill-hold">持有</span> 獲利已逾1.5倍且為最大個股部位，目標價仍有空間但續抱優於加碼。</td>
+  <td>NVDA</td>
+  <td>44.0752</td>
+  <td>$80.24</td>
+  <td>$217.44</td>
+  <td class="negative">-1.62%</td>
+  <td class="positive">+$6,047.12 (+170.99%)</td>
+  <td>$180–$515（平均約$325.99），評等：Strong Buy（57買/1賣出）</td>
+  <td><span class="pill pill-trim">減碼</span> 累積獲利已逾170%且部位集中度高，雖分析師仍看多，基於風險控管可考慮分批獲利了結（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>ORCL</td><td>甲骨文</td><td>4.008</td><td>$138.57</td><td>$127.25（盤前價，前收$126.41）</td><td class="gain">+0.66%（盤前）</td><td class="loss">-$45.37（-8.17%）</td><td>$251.85／買進（43位）</td><td><span class="pill pill-hold">持有</span> 股價距52週高點重挫逾6成、上週五才觸及52週低點，待止穩再評估。</td>
+  <td>ORCL</td>
+  <td>4.008</td>
+  <td>$138.57</td>
+  <td>$150.52</td>
+  <td class="negative">-5.40%</td>
+  <td class="positive">+$47.90 (+8.62%)</td>
+  <td>$110–$400（平均約$240–$246，近期已有機構下修至$240），評等：Buy</td>
+  <td><span class="pill pill-hold">持有</span> 近期因AI資本支出及舉債疑慮引發股價重挫（單日-5.4%），財務體質尚待觀察，建議持有並留意後續財報與現金流表現（非投資建議，僅供參考）</td>
 </tr>
 <tr>
-  <td>VOO</td><td>Vanguard標普500 ETF</td><td>27.5765</td><td>$495.27</td><td>$682.75</td><td>查無當日漲跌幅資料</td><td class="gain">+$5,170.05（+37.85%）</td><td>—</td><td><span class="pill pill-buy">加碼</span> 大盤核心部位，維持定期定額紀律買進即可。</td>
+  <td>VOO</td>
+  <td>27.5765</td>
+  <td>$495.27</td>
+  <td>$704.89</td>
+  <td class="negative">-0.33%</td>
+  <td class="positive">+$5,780.59 (+42.32%)</td>
+  <td>ETF不適用</td>
+  <td><span class="pill pill-hold">持有</span> 大盤指數型ETF，適合長期定期定額持續持有累積（非投資建議，僅供參考）</td>
 </tr>
-<tr>
-  <td colspan="4"><strong>彙總</strong>　總成本 $33,550.59</td><td colspan="2">總現值 $47,761.45</td><td class="gain" colspan="3"><strong>總未實現損益 +$14,210.86（+42.36%）</strong></td>
-</tr>
-</tbody></table><p class="disclaimer">以上為資訊整理，非投資建議。</p>
-
+<tr class="summary-row"><td colspan="8">總成本: $33,550.59 | 總現值: $50,083.09 | 總損益: +$16,532.50 (+49.28%)</td></tr></tbody></table>
 </section>
 
 </div>
 
 <footer>
-  美股每日資訊看板 · 自動產出 · 2026/07/20 · 本內容僅供參考，不構成投資建議
+  美股每日資訊看板 · 自動產出 · 2026/09/02 · 本內容僅供參考，不構成投資建議
 </footer>
 
 </body>
